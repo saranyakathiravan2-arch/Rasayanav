@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LABC – Leading Authority in Business & Consultancy</title>
+  <meta name="description" content="LABC delivers premium business consultancy, engineering services, and project management solutions across industries." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Hero animate initial state (before JS runs) */
+    .hero-animate { opacity: 0; transform: translateY(20px); }
+  </style>
+</head>
+<body>
+
+<!-- ============ PAGE LOADER ============ -->
+<div id="page-loader">
+  <div class="loader-content">
+    <div class="loader-logo">LA<span>BC</span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">LA</div>
+        <span class="logo-text">LA<span>BC</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="clients.html">Clients</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero-home">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+
+  <div class="container">
+    <!-- Left Content -->
+    <div class="hero-left">
+      <div class="hero-badge hero-animate">
+        <span class="hero-badge-dot"><i class="fas fa-bolt"></i></span>
+        Excellence Since 2003
+      </div>
+
+      <h1 class="hero-title hero-animate">
+        <span class="line">Building</span>
+        <span class="line highlight">Tomorrow's</span>
+        <span class="line">Infrastructure</span>
+        <span class="line outline-text">Today</span>
+      </h1>
+
+      <p class="hero-desc hero-animate">
+        LABC is a premier consultancy delivering world-class engineering, project management, and advisory services. We transform complex challenges into exceptional outcomes.
+      </p>
+
+      <div class="hero-actions hero-animate">
+        <a href="services.html" class="btn btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
+        <a href="portfolio.html" class="btn btn-outline">View Our Work</a>
+      </div>
+
+      <div class="hero-stats hero-animate">
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span data-counter data-target="20" data-suffix="+">0+</span></span>
+          <span class="hero-stat-label">Years Experience</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span data-counter data-target="500" data-suffix="+">0+</span></span>
+          <span class="hero-stat-label">Projects Delivered</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num"><span data-counter data-target="150" data-suffix="+">0+</span></span>
+          <span class="hero-stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Visual -->
+    <div class="hero-visual hero-animate">
+      <img
+        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+        alt="Modern Corporate Building"
+        class="hero-img-main"
+      />
+
+      <!-- Floating Cards -->
+      <div class="hero-img-card card-1">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <span class="card-label">Project Success Rate</span>
+        <span class="card-value">98.6%</span>
+      </div>
+
+      <div class="hero-img-card card-2">
+        <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+        <span class="card-label">ISO Certified</span>
+        <span class="card-value">9001:2015</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ============ CLIENTS STRIP ============ -->
+<section class="clients-section" style="background: var(--off-white);">
+  <div class="container">
+    <p style="text-align:center; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.12em; color:var(--mid-gray); margin-bottom:32px;">Trusted by leading organizations</p>
+    <div class="clients-logos">
+      <span class="client-logo">ARAMCO</span>
+      <span class="client-logo">SABIC</span>
+      <span class="client-logo">NEOM</span>
+      <span class="client-logo">MAADEN</span>
+      <span class="client-logo">STC</span>
+      <span class="client-logo">ACWA POWER</span>
+      <span class="client-logo">SWCC</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES PREVIEW ============ -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="display-lg" data-aos="fade-up">Comprehensive Solutions<br>Across Industries</h2>
+      <p data-aos="fade-up" data-delay="100">From initial concept to final commissioning, we provide end-to-end professional services with uncompromising quality standards.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Service 1 -->
+      <div class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-icon teal"><i class="fas fa-building"></i></div>
+        <h3>Civil & Structural Engineering</h3>
+        <p>Expert structural design, analysis, and supervision for commercial, industrial, and residential projects of any scale.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card" data-aos="fade-up" data-delay="200">
+        <div class="service-icon blue"><i class="fas fa-bolt"></i></div>
+        <h3>Electrical & Instrumentation</h3>
+        <p>Complete E&I design, installation, testing and commissioning services for complex industrial facilities.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card" data-aos="fade-up" data-delay="300">
+        <div class="service-icon gold"><i class="fas fa-gears"></i></div>
+        <h3>Mechanical Engineering</h3>
+        <p>Precision mechanical systems design, equipment selection, and process optimization for peak performance.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card" data-aos="fade-up" data-delay="100">
+        <div class="service-icon purple"><i class="fas fa-clipboard-list"></i></div>
+        <h3>Project Management</h3>
+        <p>Strategic project planning, scheduling, cost control, and risk management for on-time, on-budget delivery.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card" data-aos="fade-up" data-delay="200">
+        <div class="service-icon red"><i class="fas fa-fire"></i></div>
+        <h3>Fire Protection & Safety</h3>
+        <p>Comprehensive fire detection, suppression system design, and safety consulting to protect lives and assets.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card" data-aos="fade-up" data-delay="300">
+        <div class="service-icon green"><i class="fas fa-leaf"></i></div>
+        <h3>Environmental & Sustainability</h3>
+        <p>Environmental impact assessments, sustainability consulting, and green building certification support.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;" data-aos="fade-up">
+      <a href="services.html" class="btn btn-dark">View All Services <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-inner">
+      <!-- Image Column -->
+      <div class="why-img" data-aos="fade-right">
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80"
+          alt="Engineering Team at Work"
+        />
+        <div class="why-img-badge">
+          <div class="big-num">20+</div>
+          <div class="big-label">Years of Excellence</div>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div data-aos="fade-left">
+        <span class="section-label" style="color:rgba(255,255,255,0.5);">Why LABC</span>
+        <h2 class="display-lg text-white" style="margin-bottom:1rem;">
+          Partners in<br><span class="text-accent">Your Success</span>
+        </h2>
+        <p style="color:rgba(255,255,255,0.55); line-height:1.75; font-size:0.95rem;">
+          We combine deep technical expertise with a client-centric approach to deliver solutions that exceed expectations. Our integrated team of certified professionals brings unmatched experience across sectors.
+        </p>
+
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fas fa-medal"></i></div>
+            <div class="why-feature-text">
+              <h4>ISO 9001:2015 Certified Quality</h4>
+              <p>Our quality management system ensures consistent, world-class deliverables on every project.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fas fa-users"></i></div>
+            <div class="why-feature-text">
+              <h4>300+ Qualified Professionals</h4>
+              <p>A multidisciplinary team of engineers, consultants, and project managers with global experience.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fas fa-globe"></i></div>
+            <div class="why-feature-text">
+              <h4>Regional & International Reach</h4>
+              <p>Active presence across GCC with proven track record in 15+ countries and major industrial zones.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fas fa-clock"></i></div>
+            <div class="why-feature-text">
+              <h4>On-Time, On-Budget Delivery</h4>
+              <p>98.6% project success rate with stringent schedule and cost management across all engagements.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="btn btn-primary" style="margin-top:32px;">Learn About Us <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="fade-up">
+        <span class="stat-num" data-counter data-target="500" data-suffix="+">0</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-delay="100">
+        <span class="stat-num" data-counter data-target="150" data-suffix="+">0</span>
+        <span class="stat-label">Satisfied Clients</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-delay="200">
+        <span class="stat-num" data-counter data-target="20" data-suffix="+">0</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-delay="300">
+        <span class="stat-num" data-counter data-target="300" data-suffix="+">0</span>
+        <span class="stat-label">Expert Professionals</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO PREVIEW ============ -->
+<section style="background: var(--off-white); padding: 100px 0;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Work</span>
+      <h2 class="display-lg" data-aos="fade-up">Featured Projects</h2>
+      <p data-aos="fade-up" data-delay="100">A selection of our most impactful and technically demanding projects delivered across sectors.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-aos="fade-up" data-delay="100">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" alt="Industrial Plant" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-cat">Oil & Gas</span>
+          <div class="portfolio-title">Riyadh Gas Processing Facility</div>
+          <a href="portfolio.html" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up" data-delay="200">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80" alt="Commercial Building" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-cat">Commercial</span>
+          <div class="portfolio-title">Jeddah Business Tower</div>
+          <a href="portfolio.html" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up" data-delay="300">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="Urban Infrastructure" class="portfolio-img" />
+        <div class="portfolio-overlay">
+          <span class="portfolio-cat">Infrastructure</span>
+          <div class="portfolio-title">Eastern Province Road Network</div>
+          <a href="portfolio.html" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;" data-aos="fade-up">
+      <a href="portfolio.html" class="btn btn-dark">View All Projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Client Voices</span>
+      <h2 class="display-lg" data-aos="fade-up">What Our Clients Say</h2>
+      <p data-aos="fade-up" data-delay="100">Real feedback from the organizations we've partnered with to deliver exceptional results.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="testimonial-card" data-aos="fade-up" data-delay="100">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">LABC's engineering team brought unparalleled expertise to our refinery expansion project. Their attention to detail and commitment to quality was evident at every stage.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div>
+            <div class="author-name">Ahmed Al-Khaldi</div>
+            <div class="author-role">VP Engineering, Saudi Aramco</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-delay="200">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Outstanding project management capabilities. LABC delivered our petrochemical plant on time and within budget — a remarkable achievement for a project of this complexity.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MN</div>
+          <div>
+            <div class="author-name">Mohammed Al-Naser</div>
+            <div class="author-role">Director, SABIC Projects</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-delay="300">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">From design to commissioning, LABC's integrated approach saved us both time and resources. Their team's depth of knowledge across disciplines is genuinely impressive.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SA</div>
+          <div>
+            <div class="author-name">Sara Al-Amri</div>
+            <div class="author-role">Head of Projects, NEOM</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div data-aos="fade-right">
+        <h2>Ready to Start Your Next Project?</h2>
+        <p>Let's discuss how LABC can bring your vision to life with precision and excellence.</p>
+      </div>
+      <div data-aos="fade-left" style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-dark">Get in Touch <i class="fas fa-arrow-right"></i></a>
+        <a href="tel:+966XXXXXXXX" class="btn" style="background:rgba(255,255,255,0.15); color:white; border:2px solid rgba(255,255,255,0.3);">
+          <i class="fas fa-phone"></i> Call Us Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0;">
+          <div class="logo-mark">LA</div>
+          <span class="logo-text">LA<span>BC</span></span>
+        </div>
+        <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">Civil Engineering</a></li>
+          <li><a href="services.html">Electrical & Instrumentation</a></li>
+          <li><a href="services.html">Mechanical Engineering</a></li>
+          <li><a href="services.html">Project Management</a></li>
+          <li><a href="services.html">Fire Protection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item">
+          <i class="fas fa-location-dot"></i>
+          <span>King Fahd Road, Al Olaya, Riyadh 11553, Saudi Arabia</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+966 11 XXX XXXX</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@labc.com.sa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 LABC. All rights reserved.</span>
+      <span>Built with precision &amp; passion</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

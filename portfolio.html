@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – LABC</title>
+  <meta name="description" content="Explore LABC's portfolio of completed projects across oil & gas, infrastructure, commercial, and industrial sectors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="page-loader">
+  <div class="loader-content">
+    <div class="loader-logo">LA<span>BC</span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="logo-mark">LA</div><span class="logo-text">LA<span>BC</span></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a></div>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a><a href="gallery.html">Gallery</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-accent"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Portfolio</span>
+      </nav>
+      <h1>Our Portfolio</h1>
+      <p>500+ projects delivered across diverse sectors — each one a testament to our engineering excellence and commitment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section>
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="oil-gas">Oil & Gas</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+      <button class="filter-btn" data-filter="industrial">Industrial</button>
+      <button class="filter-btn" data-filter="water">Water & Utilities</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-all-grid">
+
+      <div class="portfolio-card" data-category="oil-gas" data-aos="fade-up" data-delay="100"
+        data-modal='{"img":"https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80","title":"Riyadh Gas Processing Facility","category":"Oil & Gas","desc":"<p>A major gas processing facility for Saudi Aramco in the Riyadh region. LABC provided full EPCM services including detailed engineering, procurement support, and construction management for this $450M project.</p><p style=\"margin-top:12px;\">Key deliverables included complete E&I design, structural engineering, process optimization, and a phased commissioning plan that minimized production disruption.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Saudi Aramco</li><li>Value: SAR 1.7 Billion</li><li>Duration: 36 Months</li><li>Status: Completed</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" alt="Gas Processing Facility" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Oil & Gas</div>
+          <div class="portfolio-card-title">Riyadh Gas Processing Facility</div>
+          <p class="portfolio-card-desc">Full EPCM services for a major gas processing facility. SAR 1.7B project delivered on schedule.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="commercial" data-aos="fade-up" data-delay="150"
+        data-modal='{"img":"https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80","title":"Jeddah Business Tower","category":"Commercial","desc":"<p>A 42-story mixed-use tower in central Jeddah. LABC was engaged for structural engineering, MEP design, and project management consultancy services.</p><p style=\"margin-top:12px;\">The project involved complex foundation design due to challenging soil conditions and a demanding construction timeline to meet the developer\'s lease commitments.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Al-Mamlaka Real Estate</li><li>Value: SAR 680 Million</li><li>Duration: 48 Months</li><li>Status: Completed</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80" alt="Business Tower" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Commercial</div>
+          <div class="portfolio-card-title">Jeddah Business Tower</div>
+          <p class="portfolio-card-desc">42-story mixed-use tower — structural, MEP, and PMC services for a landmark development.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="infrastructure" data-aos="fade-up" data-delay="200"
+        data-modal='{"img":"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80","title":"Eastern Province Road Network","category":"Infrastructure","desc":"<p>A 320km road network development project connecting key industrial zones in the Eastern Province. LABC provided detailed design, supervision, and QA/QC services.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Ministry of Transport</li><li>Value: SAR 2.1 Billion</li><li>Duration: 54 Months</li><li>Status: Completed</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="Road Network" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Infrastructure</div>
+          <div class="portfolio-card-title">Eastern Province Road Network</div>
+          <p class="portfolio-card-desc">320km road network — detailed design and supervision for Ministry of Transport.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="industrial" data-aos="fade-up" data-delay="100"
+        data-modal='{"img":"https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=800&q=80","title":"Jubail Industrial Expansion","category":"Industrial","desc":"<p>Expansion of a major industrial facility in Jubail Industrial City for SABIC. LABC delivered complete detailed engineering for civil, mechanical, and electrical disciplines.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: SABIC</li><li>Value: SAR 920 Million</li><li>Duration: 30 Months</li><li>Status: Completed</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=600&q=80" alt="Industrial Plant" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Industrial</div>
+          <div class="portfolio-card-title">Jubail Industrial Expansion</div>
+          <p class="portfolio-card-desc">Multi-discipline detailed engineering for SABIC's Jubail Industrial City expansion.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="water" data-aos="fade-up" data-delay="150"
+        data-modal='{"img":"https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=800&q=80","title":"Madinah Water Treatment Plant","category":"Water & Utilities","desc":"<p>Design and supervision of a 250,000 m³/day water treatment plant serving the holy city of Madinah. LABC delivered the full EPCM package for this critical infrastructure project.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: NWC / SWCC</li><li>Value: SAR 1.2 Billion</li><li>Duration: 42 Months</li><li>Status: Completed</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=600&q=80" alt="Water Treatment" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Water & Utilities</div>
+          <div class="portfolio-card-title">Madinah Water Treatment Plant</div>
+          <p class="portfolio-card-desc">250,000 m³/day treatment facility — EPCM services for this critical water infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="oil-gas" data-aos="fade-up" data-delay="200"
+        data-modal='{"img":"https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=800&q=80","title":"Offshore Platform Engineering","category":"Oil & Gas","desc":"<p>Detailed structural and piping engineering for an offshore production platform in the Arabian Gulf. Complex design challenge requiring compliance with API, ISO, and client-specific standards.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Aramco Offshore</li><li>Value: SAR 560 Million</li><li>Duration: 24 Months</li><li>Status: Completed</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=600&q=80" alt="Offshore Platform" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Oil & Gas</div>
+          <div class="portfolio-card-title">Offshore Platform Engineering</div>
+          <p class="portfolio-card-desc">Structural and piping engineering for an Arabian Gulf offshore production platform.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="commercial" data-aos="fade-up" data-delay="100"
+        data-modal='{"img":"https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80","title":"Riyadh Mixed-Use Complex","category":"Commercial","desc":"<p>A premium mixed-use development featuring Grade-A offices, retail, and hospitality spaces. LABC provided MEP engineering and sustainability consulting to achieve a 4-star Green Building rating.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: PIF Development</li><li>Value: SAR 840 Million</li><li>Duration: 52 Months</li><li>Status: In Progress</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office Complex" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Commercial</div>
+          <div class="portfolio-card-title">Riyadh Mixed-Use Complex</div>
+          <p class="portfolio-card-desc">Premium mixed-use development with 4-star green building rating — MEP and sustainability design.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="infrastructure" data-aos="fade-up" data-delay="150"
+        data-modal='{"img":"https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=800&q=80","title":"Makkah Metro Extension","category":"Infrastructure","desc":"<p>Structural and civil engineering design support for the Makkah Metro Line 5 extension. Critical infrastructure requiring 24/7 coordination and strict quality management protocols.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: SAR (Saudi Railway Organization)</li><li>Value: SAR 3.2 Billion</li><li>Duration: 60 Months</li><li>Status: In Progress</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=600&q=80" alt="Metro" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Infrastructure</div>
+          <div class="portfolio-card-title">Makkah Metro Extension</div>
+          <p class="portfolio-card-desc">Structural design support for metro extension — critical transport infrastructure for holy city.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card" data-category="industrial" data-aos="fade-up" data-delay="200"
+        data-modal='{"img":"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80","title":"NEOM Industrial Zone","category":"Industrial","desc":"<p>Infrastructure and utilities engineering for the industrial zone within the NEOM mega-project. LABC is providing multi-discipline engineering consultancy for this visionary development.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: NEOM</li><li>Value: SAR 1.8 Billion</li><li>Duration: Ongoing</li><li>Status: In Progress</li></ul>"}'>
+        <div class="portfolio-card-img">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="NEOM Project" />
+        </div>
+        <div class="portfolio-card-body">
+          <div class="portfolio-card-cat">Industrial</div>
+          <div class="portfolio-card-title">NEOM Industrial Zone</div>
+          <p class="portfolio-card-desc">Multi-discipline engineering consultancy for NEOM's industrial zone infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Stats -->
+<section style="background:var(--primary); padding:80px 0;">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-aos="fade-up">
+        <span class="stat-num" data-counter data-target="500" data-suffix="+">0</span>
+        <span class="stat-label" style="color:rgba(255,255,255,0.5);">Projects Completed</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-delay="100">
+        <span class="stat-num" data-counter data-target="12" data-suffix="B+">0</span>
+        <span class="stat-label" style="color:rgba(255,255,255,0.5);">SAR Project Value</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-delay="200">
+        <span class="stat-num" data-counter data-target="15" data-suffix="+">0</span>
+        <span class="stat-label" style="color:rgba(255,255,255,0.5);">Countries Served</span>
+      </div>
+      <div class="stat-item" data-aos="fade-up" data-delay="300">
+        <span class="stat-num" data-counter data-target="98" data-suffix="%">0</span>
+        <span class="stat-label" style="color:rgba(255,255,255,0.5);">On-Time Delivery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2>Ready to Add Your Project to Our Portfolio?</h2>
+        <p>Contact our team today and discover how LABC can deliver excellence for your next challenge.</p>
+      </div>
+      <a href="contact.html" class="btn btn-dark">Start Your Project <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0;"><div class="logo-mark">LA</div><span class="logo-text">LA<span>BC</span></span></div>
+        <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Civil Engineering</a></li><li><a href="services.html">Electrical & Instrumentation</a></li><li><a href="services.html">Mechanical Engineering</a></li><li><a href="services.html">Project Management</a></li><li><a href="services.html">Fire Protection</a></li></ul></div>
+      <div class="footer-col"><h5>Contact Us</h5>
+        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>King Fahd Road, Al Olaya, Riyadh 11553, Saudi Arabia</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+966 11 XXX XXXX</span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@labc.com.sa</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 LABC. All rights reserved.</span><span>Built with precision &amp; passion</span></div>
+  </div>
+</footer>
+
+<!-- Portfolio Modal -->
+<div class="portfolio-modal" id="portfolio-modal">
+  <div class="modal-inner" style="position:relative;">
+    <button class="modal-close"><i class="fas fa-times"></i></button>
+    <img class="modal-img" src="" alt="" />
+    <div class="modal-body">
+      <div class="portfolio-card-cat modal-cat" style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin-bottom:8px;"></div>
+      <h2 class="modal-title" style="font-size:1.6rem; margin-bottom:16px;"></h2>
+      <div class="modal-desc" style="color:var(--dark-gray); font-size:0.92rem; line-height:1.75;"></div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:24px;">Discuss a Similar Project <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<script src="js/main.js"></script>
+</body>
+</html>

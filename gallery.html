@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – LABC</title>
+  <meta name="description" content="Browse LABC's project gallery — images from our engineering, construction, and consultancy projects across Saudi Arabia and the GCC." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Extra gallery-specific styles */
+    .gallery-stats {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+    .gallery-stat {
+      text-align: center;
+    }
+    .gallery-stat-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    .gallery-stat-label {
+      font-size: 0.8rem;
+      color: var(--mid-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    /* Staggered masonry items animation */
+    .gallery-item {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .gallery-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gallery category badge on image */
+    .gallery-item-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(10,37,64,0.75);
+      backdrop-filter: blur(8px);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .gallery-item:hover .gallery-item-badge {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Lightbox counter */
+    .lightbox-counter {
+      position: absolute;
+      top: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.5);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    /* Filter active state animation */
+    .filter-btn {
+      transition: all 0.25s ease;
+    }
+
+    /* Lightbox img transition */
+    .lightbox img {
+      transition: opacity 0.25s ease, transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-content">
+    <div class="loader-logo">LA<span>BC</span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">LA</div>
+        <span class="logo-text">LA<span>BC</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="clients.html">Clients</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <button class="hamburger" aria-label="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="clients.html">Clients</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-accent"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Gallery</span>
+      </nav>
+      <h1>Project Gallery</h1>
+      <p>A visual journey through our most iconic projects — from industrial masterpieces to architectural landmarks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section>
+  <div class="container">
+
+    <!-- Stats Row -->
+    <div class="gallery-stats" data-aos="fade-up">
+      <div class="gallery-stat">
+        <span class="gallery-stat-num">500+</span>
+        <span class="gallery-stat-label">Projects Photographed</span>
+      </div>
+      <div class="gallery-stat">
+        <span class="gallery-stat-num">6</span>
+        <span class="gallery-stat-label">Categories</span>
+      </div>
+      <div class="gallery-stat">
+        <span class="gallery-stat-num">15+</span>
+        <span class="gallery-stat-label">Countries</span>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filters" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="oil-gas">Oil & Gas</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+      <button class="filter-btn" data-filter="industrial">Industrial</button>
+      <button class="filter-btn" data-filter="water">Water & Utilities</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="gallery-masonry" id="gallery-grid">
+
+      <!-- Row 1 -->
+      <div class="gallery-item" data-category="oil-gas"
+           data-src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1000&q=85"
+           data-caption="Riyadh Gas Processing Facility — Oil & Gas">
+        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=500&q=80" alt="Gas Processing Facility" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Oil & Gas</span>
+      </div>
+
+      <div class="gallery-item" data-category="commercial"
+           data-src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=85"
+           data-caption="Jeddah Business Tower — Commercial">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="Business Tower" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Commercial</span>
+      </div>
+
+      <div class="gallery-item" data-category="infrastructure"
+           data-src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1000&q=85"
+           data-caption="Eastern Province Road Network — Infrastructure">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=500&q=80" alt="City Infrastructure" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Infrastructure</span>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="gallery-item" data-category="industrial"
+           data-src="https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=1000&q=85"
+           data-caption="Jubail Industrial Zone — Industrial">
+        <img src="https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=500&q=80" alt="Industrial Facility" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Industrial</span>
+      </div>
+
+      <div class="gallery-item" data-category="water"
+           data-src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=1000&q=85"
+           data-caption="Madinah Water Treatment Plant — Water & Utilities">
+        <img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=500&q=80" alt="Water Treatment Plant" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Water & Utilities</span>
+      </div>
+
+      <div class="gallery-item" data-category="commercial"
+           data-src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1000&q=85"
+           data-caption="Riyadh Commercial Complex — Commercial">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&q=80" alt="Commercial Complex" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Commercial</span>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="gallery-item" data-category="oil-gas"
+           data-src="https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=1000&q=85"
+           data-caption="Offshore Platform — Oil & Gas">
+        <img src="https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=500&q=80" alt="Offshore Platform" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Oil & Gas</span>
+      </div>
+
+      <div class="gallery-item" data-category="infrastructure"
+           data-src="https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=1000&q=85"
+           data-caption="Makkah Metro Extension — Infrastructure">
+        <img src="https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=500&q=80" alt="Metro Infrastructure" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Infrastructure</span>
+      </div>
+
+      <div class="gallery-item" data-category="industrial"
+           data-src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&q=85"
+           data-caption="NEOM Industrial Zone — Industrial">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Engineering Site" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Industrial</span>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="gallery-item" data-category="commercial"
+           data-src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=85"
+           data-caption="Modern Office Interior — Commercial">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Office Interior" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Commercial</span>
+      </div>
+
+      <div class="gallery-item" data-category="oil-gas"
+           data-src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1000&q=85"
+           data-caption="Pipeline Engineering — Oil & Gas">
+        <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=500&q=80" alt="Pipeline Engineering" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Oil & Gas</span>
+      </div>
+
+      <div class="gallery-item" data-category="water"
+           data-src="https://images.unsplash.com/photo-1574023278561-95c5c3d0e7b7?w=1000&q=85"
+           data-caption="Desalination Plant — Water & Utilities">
+        <img src="https://images.unsplash.com/photo-1574023278561-95c5c3d0e7b7?w=500&q=80" alt="Water Treatment" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Water & Utilities</span>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="gallery-item" data-category="infrastructure"
+           data-src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&q=85"
+           data-caption="Bridge Engineering — Infrastructure">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80" alt="Bridge Engineering" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Infrastructure</span>
+      </div>
+
+      <div class="gallery-item" data-category="industrial"
+           data-src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=85"
+           data-caption="Project Engineering — Industrial">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="Engineering Team" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Industrial</span>
+      </div>
+
+      <div class="gallery-item" data-category="commercial"
+           data-src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1000&q=85"
+           data-caption="Corporate Team — Commercial">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80" alt="Corporate Team" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon"><i class="fas fa-expand-alt"></i></div>
+        </div>
+        <span class="gallery-item-badge">Commercial</span>
+      </div>
+
+    </div><!-- /.gallery-masonry -->
+
+    <!-- View More Button -->
+    <div style="text-align:center; margin-top:56px;" data-aos="fade-up">
+      <p style="color:var(--mid-gray); font-size:0.88rem; margin-bottom:16px;">Showing 15 of 200+ gallery images</p>
+      <a href="contact.html" class="btn btn-dark">
+        <i class="fas fa-images"></i> Request Full Project Album
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="margin-top:40px;">
+  <div class="container">
+    <div class="cta-inner">
+      <div data-aos="fade-right">
+        <h2>Impressed by What You've Seen?</h2>
+        <p>Let's discuss how LABC can create something equally remarkable for your project.</p>
+      </div>
+      <div data-aos="fade-left" style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
+        <a href="contact.html" class="btn btn-dark">Start a Project <i class="fas fa-arrow-right"></i></a>
+        <a href="portfolio.html" class="btn" style="background:rgba(255,255,255,0.15); color:white; border:2px solid rgba(255,255,255,0.3);">
+          View Portfolio
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0;">
+          <div class="logo-mark">LA</div>
+          <span class="logo-text">LA<span>BC</span></span>
+        </div>
+        <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html">Civil Engineering</a></li>
+          <li><a href="services.html">Electrical & Instrumentation</a></li>
+          <li><a href="services.html">Mechanical Engineering</a></li>
+          <li><a href="services.html">Project Management</a></li>
+          <li><a href="services.html">Fire Protection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item">
+          <i class="fas fa-location-dot"></i>
+          <span>King Fahd Road, Al Olaya, Riyadh 11553, Saudi Arabia</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+966 11 XXX XXXX</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@labc.com.sa</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 LABC. All rights reserved.</span>
+      <span>Built with precision &amp; passion</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+  <img class="lightbox-img" src="" alt="Gallery Image" />
+  <button class="lightbox-nav lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+  <div class="lightbox-caption"></div>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+<script>
+  // Enhanced gallery filter with smooth transitions
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    // Staggered reveal on load
+    galleryItems.forEach((item, i) => {
+      setTimeout(() => item.classList.add('visible'), 100 + i * 60);
+    });
+
+    // Filter logic
+    document.querySelectorAll('.gallery-filters .filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-filters .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          const match = cat === 'all' || item.getAttribute('data-category') === cat;
+          item.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+          if (match) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1) translateY(0)';
+            }, 10);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.92) translateY(8px)';
+            setTimeout(() => item.style.display = 'none', 360);
+          }
+        });
+      });
+    });
+
+    // Enhanced lightbox with counter
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox?.querySelector('.lightbox-img');
+    const lightboxCaption = lightbox?.querySelector('.lightbox-caption');
+    const counterEl = document.getElementById('lightbox-counter');
+    let currentIdx = 0;
+    let visibleImages = [];
+
+    function buildVisibleList() {
+      visibleImages = [...document.querySelectorAll('.gallery-item[data-src]')]
+        .filter(el => el.style.display !== 'none');
+    }
+
+    function openLightbox(idx) {
+      buildVisibleList();
+      currentIdx = idx;
+      const item = visibleImages[currentIdx];
+      if (!item || !lightboxImg) return;
+      lightboxImg.src = item.getAttribute('data-src');
+      lightboxImg.alt = item.querySelector('img')?.alt || '';
+      lightboxCaption.textContent = item.getAttribute('data-caption') || '';
+      counterEl.textContent = `${currentIdx + 1} / ${visibleImages.length}`;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox?.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      buildVisibleList();
+      currentIdx = (currentIdx + dir + visibleImages.length) % visibleImages.length;
+      if (!lightboxImg) return;
+      lightboxImg.style.opacity = '0';
+      setTimeout(() => {
+        lightboxImg.src = visibleImages[currentIdx].getAttribute('data-src');
+        lightboxCaption.textContent = visibleImages[currentIdx].getAttribute('data-caption') || '';
+        counterEl.textContent = `${currentIdx + 1} / ${visibleImages.length}`;
+        lightboxImg.style.opacity = '1';
+      }, 200);
+    }
+
+    document.querySelectorAll('.gallery-item[data-src]').forEach((item, idx) => {
+      item.addEventListener('click', () => {
+        buildVisibleList();
+        const vIdx = visibleImages.indexOf(item);
+        openLightbox(vIdx >= 0 ? vIdx : 0);
+      });
+    });
+
+    lightbox?.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
+    lightbox?.querySelector('.lightbox-prev')?.addEventListener('click', () => navigate(-1));
+    lightbox?.querySelector('.lightbox-next')?.addEventListener('click', () => navigate(1));
+    lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox?.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  });
+</script>
+</body>
+</html>
