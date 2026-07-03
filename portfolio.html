@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – LABC</title>
-  <meta name="description" content="Explore LABC's portfolio of completed projects across oil & gas, infrastructure, commercial, and industrial sectors." />
+  <title>Portfolio | Rasayanav</title>
+  <meta name="description" content="Explore rasayanav's portfolio of completed projects across oil & gas, infrastructure, commercial, and industrial sectors." />
+  <meta name="keywords" content="rasayanav portfolio, engineering projects, infrastructure projects, oil and gas, industrial solutions" />
+  <meta property="og:title" content="Portfolio | Rasayanav" />
+  <meta property="og:description" content="Explore rasayanav's portfolio of completed projects across oil & gas, infrastructure, commercial, and industrial sectors." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -15,7 +26,7 @@
 
 <div id="page-loader">
   <div class="loader-content">
-    <div class="loader-logo">LA<span>BC</span></div>
+    <div class="loader-logo"><img src="images/logo.png" alt="rasayanav logo" class="loader-logo-img" /></div>
     <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
   </div>
 </div>
@@ -23,12 +34,13 @@
 <nav id="navbar">
   <div class="container">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><div class="logo-mark">LA</div><span class="logo-text">LA<span>BC</span></span></a>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" />
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="clients.html">Clients</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -42,7 +54,7 @@
 <div class="mobile-menu">
   <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
   <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
-  <a href="portfolio.html">Portfolio</a><a href="gallery.html">Gallery</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+  <a href="gallery.html">Gallery</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
 </div>
 
 <!-- PAGE HERO -->
@@ -77,9 +89,7 @@
 
     <!-- Portfolio Grid -->
     <div class="portfolio-all-grid">
-
-      <div class="portfolio-card" data-category="oil-gas" data-aos="fade-up" data-delay="100"
-        data-modal='{"img":"https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80","title":"Riyadh Gas Processing Facility","category":"Oil & Gas","desc":"<p>A major gas processing facility for Saudi Aramco in the Riyadh region. LABC provided full EPCM services including detailed engineering, procurement support, and construction management for this $450M project.</p><p style=\"margin-top:12px;\">Key deliverables included complete E&I design, structural engineering, process optimization, and a phased commissioning plan that minimized production disruption.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Saudi Aramco</li><li>Value: SAR 1.7 Billion</li><li>Duration: 36 Months</li><li>Status: Completed</li></ul>"}'>
+      <div class="portfolio-card" data-category="oil-gas" data-aos="fade-up" data-delay="100" data-modal='{"img":"https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80","title":"Riyadh Gas Processing Facility","category":"Oil & Gas","desc":"<p>A major gas processing facility for Saudi Aramco in the Riyadh region. rasayanav provided full EPCM services including detailed engineering, procurement support, and construction management for this $450M project.</p><p>Key deliverables included complete E&I design, structural engineering, process optimization, and a phased commissioning plan that minimized production disruption.</p><ul><li>Client: Saudi Aramco</li><li>Value: SAR 1.7 Billion</li><li>Duration: 36 Months</li><li>Status: Completed</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&q=80" alt="Gas Processing Facility" />
         </div>
@@ -90,8 +100,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="commercial" data-aos="fade-up" data-delay="150"
-        data-modal='{"img":"https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80","title":"Jeddah Business Tower","category":"Commercial","desc":"<p>A 42-story mixed-use tower in central Jeddah. LABC was engaged for structural engineering, MEP design, and project management consultancy services.</p><p style=\"margin-top:12px;\">The project involved complex foundation design due to challenging soil conditions and a demanding construction timeline to meet the developer\'s lease commitments.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Al-Mamlaka Real Estate</li><li>Value: SAR 680 Million</li><li>Duration: 48 Months</li><li>Status: Completed</li></ul>"}'>
+      <div class="portfolio-card" data-category="commercial" data-aos="fade-up" data-delay="150" data-modal='{"img":"https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80","title":"Jeddah Business Tower","category":"Commercial","desc":"<p>A 42-story mixed-use tower in central Jeddah. rasayanav was engaged for structural engineering, MEP design, and project management consultancy services.</p><p>The project involved complex foundation design due to challenging soil conditions and a demanding construction timeline to meet the developer\'s lease commitments.</p><ul><li>Client: Al-Mamlaka Real Estate</li><li>Value: SAR 680 Million</li><li>Duration: 48 Months</li><li>Status: Completed</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80" alt="Business Tower" />
         </div>
@@ -102,8 +111,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="infrastructure" data-aos="fade-up" data-delay="200"
-        data-modal='{"img":"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80","title":"Eastern Province Road Network","category":"Infrastructure","desc":"<p>A 320km road network development project connecting key industrial zones in the Eastern Province. LABC provided detailed design, supervision, and QA/QC services.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Ministry of Transport</li><li>Value: SAR 2.1 Billion</li><li>Duration: 54 Months</li><li>Status: Completed</li></ul>"}'>
+      <div class="portfolio-card" data-category="infrastructure" data-aos="fade-up" data-delay="200" data-modal='{"img":"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80","title":"Eastern Province Road Network","category":"Infrastructure","desc":"<p>A 320km road network development project connecting key industrial zones in the Eastern Province. rasayanav provided detailed design, supervision, and QA/QC services.</p><ul><li>Client: Ministry of Transport</li><li>Value: SAR 2.1 Billion</li><li>Duration: 54 Months</li><li>Status: Completed</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="Road Network" />
         </div>
@@ -114,8 +122,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="industrial" data-aos="fade-up" data-delay="100"
-        data-modal='{"img":"https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=800&q=80","title":"Jubail Industrial Expansion","category":"Industrial","desc":"<p>Expansion of a major industrial facility in Jubail Industrial City for SABIC. LABC delivered complete detailed engineering for civil, mechanical, and electrical disciplines.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: SABIC</li><li>Value: SAR 920 Million</li><li>Duration: 30 Months</li><li>Status: Completed</li></ul>"}'>
+      <div class="portfolio-card" data-category="industrial" data-aos="fade-up" data-delay="100" data-modal='{"img":"https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=800&q=80","title":"Jubail Industrial Expansion","category":"Industrial","desc":"<p>Expansion of a major industrial facility in Jubail Industrial City for SABIC. rasayanav delivered complete detailed engineering for civil, mechanical, and electrical disciplines.</p><ul><li>Client: SABIC</li><li>Value: SAR 920 Million</li><li>Duration: 30 Months</li><li>Status: Completed</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1565108301782-7e2f6c89c1f6?w=600&q=80" alt="Industrial Plant" />
         </div>
@@ -126,8 +133,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="water" data-aos="fade-up" data-delay="150"
-        data-modal='{"img":"https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=800&q=80","title":"Madinah Water Treatment Plant","category":"Water & Utilities","desc":"<p>Design and supervision of a 250,000 m³/day water treatment plant serving the holy city of Madinah. LABC delivered the full EPCM package for this critical infrastructure project.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: NWC / SWCC</li><li>Value: SAR 1.2 Billion</li><li>Duration: 42 Months</li><li>Status: Completed</li></ul>"}'>
+      <div class="portfolio-card" data-category="water" data-aos="fade-up" data-delay="150" data-modal='{"img":"https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=800&q=80","title":"Madinah Water Treatment Plant","category":"Water & Utilities","desc":"<p>Design and supervision of a 250,000 m³/day water treatment plant serving the holy city of Madinah. rasayanav delivered the full EPCM package for this critical infrastructure project.</p><ul><li>Client: NWC / SWCC</li><li>Value: SAR 1.2 Billion</li><li>Duration: 42 Months</li><li>Status: Completed</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=600&q=80" alt="Water Treatment" />
         </div>
@@ -138,8 +144,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="oil-gas" data-aos="fade-up" data-delay="200"
-        data-modal='{"img":"https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=800&q=80","title":"Offshore Platform Engineering","category":"Oil & Gas","desc":"<p>Detailed structural and piping engineering for an offshore production platform in the Arabian Gulf. Complex design challenge requiring compliance with API, ISO, and client-specific standards.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: Aramco Offshore</li><li>Value: SAR 560 Million</li><li>Duration: 24 Months</li><li>Status: Completed</li></ul>"}'>
+      <div class="portfolio-card" data-category="oil-gas" data-aos="fade-up" data-delay="200" data-modal='{"img":"https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=800&q=80","title":"Offshore Platform Engineering","category":"Oil & Gas","desc":"<p>Detailed structural and piping engineering for an offshore production platform in the Arabian Gulf. Complex design challenge requiring compliance with API, ISO, and client-specific standards.</p><ul><li>Client: Aramco Offshore</li><li>Value: SAR 560 Million</li><li>Duration: 24 Months</li><li>Status: Completed</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1611532736582-309ef55459e0?w=600&q=80" alt="Offshore Platform" />
         </div>
@@ -150,8 +155,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="commercial" data-aos="fade-up" data-delay="100"
-        data-modal='{"img":"https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80","title":"Riyadh Mixed-Use Complex","category":"Commercial","desc":"<p>A premium mixed-use development featuring Grade-A offices, retail, and hospitality spaces. LABC provided MEP engineering and sustainability consulting to achieve a 4-star Green Building rating.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: PIF Development</li><li>Value: SAR 840 Million</li><li>Duration: 52 Months</li><li>Status: In Progress</li></ul>"}'>
+      <div class="portfolio-card" data-category="commercial" data-aos="fade-up" data-delay="100" data-modal='{"img":"https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80","title":"Riyadh Mixed-Use Complex","category":"Commercial","desc":"<p>A premium mixed-use development featuring Grade-A offices, retail, and hospitality spaces. rasayanav provided MEP engineering and sustainability consulting to achieve a 4-star Green Building rating.</p><ul><li>Client: PIF Development</li><li>Value: SAR 840 Million</li><li>Duration: 52 Months</li><li>Status: In Progress</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Office Complex" />
         </div>
@@ -162,8 +166,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="infrastructure" data-aos="fade-up" data-delay="150"
-        data-modal='{"img":"https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=800&q=80","title":"Makkah Metro Extension","category":"Infrastructure","desc":"<p>Structural and civil engineering design support for the Makkah Metro Line 5 extension. Critical infrastructure requiring 24/7 coordination and strict quality management protocols.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: SAR (Saudi Railway Organization)</li><li>Value: SAR 3.2 Billion</li><li>Duration: 60 Months</li><li>Status: In Progress</li></ul>"}'>
+      <div class="portfolio-card" data-category="infrastructure" data-aos="fade-up" data-delay="150" data-modal='{"img":"https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=800&q=80","title":"Makkah Metro Extension","category":"Infrastructure","desc":"<p>Structural and civil engineering design support for the Makkah Metro Line 5 extension. Critical infrastructure requiring 24/7 coordination and strict quality management protocols.</p><ul><li>Client: SAR (Saudi Railway Organization)</li><li>Value: SAR 3.2 Billion</li><li>Duration: 60 Months</li><li>Status: In Progress</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1558804432-5c8b2fd08df3?w=600&q=80" alt="Metro" />
         </div>
@@ -174,8 +177,7 @@
         </div>
       </div>
 
-      <div class="portfolio-card" data-category="industrial" data-aos="fade-up" data-delay="200"
-        data-modal='{"img":"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80","title":"NEOM Industrial Zone","category":"Industrial","desc":"<p>Infrastructure and utilities engineering for the industrial zone within the NEOM mega-project. LABC is providing multi-discipline engineering consultancy for this visionary development.</p><ul style=\"margin-top:12px; padding-left:20px;\"><li>Client: NEOM</li><li>Value: SAR 1.8 Billion</li><li>Duration: Ongoing</li><li>Status: In Progress</li></ul>"}'>
+      <div class="portfolio-card" data-category="industrial" data-aos="fade-up" data-delay="200" data-modal='{"img":"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80","title":"NEOM Industrial Zone","category":"Industrial","desc":"<p>Infrastructure and utilities engineering for the industrial zone within the NEOM mega-project. rasayanav is providing multi-discipline engineering consultancy for this visionary development.</p><ul><li>Client: NEOM</li><li>Value: SAR 1.8 Billion</li><li>Duration: Ongoing</li><li>Status: In Progress</li></ul>"}'>
         <div class="portfolio-card-img">
           <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="NEOM Project" />
         </div>
@@ -219,7 +221,7 @@
     <div class="cta-inner">
       <div>
         <h2>Ready to Add Your Project to Our Portfolio?</h2>
-        <p>Contact our team today and discover how LABC can deliver excellence for your next challenge.</p>
+        <p>Contact our team today and discover how rasayanav can deliver excellence for your next challenge.</p>
       </div>
       <a href="contact.html" class="btn btn-dark">Start Your Project <i class="fas fa-arrow-right"></i></a>
     </div>
@@ -231,7 +233,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-logo" style="margin-bottom:0;"><div class="logo-mark">LA</div><span class="logo-text">LA<span>BC</span></span></div>
+        <div class="nav-logo" style="margin-bottom:0;"><img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" /></div>
         <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
         <div class="footer-social">
           <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
@@ -240,15 +242,15 @@
           <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
       <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Civil Engineering</a></li><li><a href="services.html">Electrical & Instrumentation</a></li><li><a href="services.html">Mechanical Engineering</a></li><li><a href="services.html">Project Management</a></li><li><a href="services.html">Fire Protection</a></li></ul></div>
       <div class="footer-col"><h5>Contact Us</h5>
-        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>King Fahd Road, Al Olaya, Riyadh 11553, Saudi Arabia</span></div>
+        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>6/585, Pasumalaithangal, Perungapur (PO), Gingee (Tk), Villupuram - 604151</span></div>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+966 11 XXX XXXX</span></div>
         <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@labc.com.sa</span></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2024 LABC. All rights reserved.</span><span>Built with precision &amp; passion</span></div>
+    <div class="footer-bottom"><span>© 2024 rasayanav. All rights reserved.</span><span>Built with precision &amp; passion</span></div>
   </div>
 </footer>
 

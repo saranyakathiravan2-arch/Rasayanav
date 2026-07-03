@@ -3,99 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services – LABC</title>
-  <meta name="description" content="Explore LABC's comprehensive engineering and consultancy services across all disciplines and industries." />
+  <title>Products | Rasayanav</title>
+  <meta name="description" content="Explore Rasayanav's comprehensive water filtration products and solutions for homes, offices, and industrial applications." />
+  <meta name="keywords" content="water filters, filtration systems, reverse osmosis, carbon filters, UV purifiers, water purification products" />
+  <meta property="og:title" content="Products | Rasayanav" />
+  <meta property="og:description" content="Rasayanav offers advanced water filtration products designed to meet diverse filtration needs." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .service-detail-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--light-gray);
-      transition: var(--transition);
-      margin-bottom: 40px;
-    }
-    .service-detail-card:hover { box-shadow: var(--shadow-md); }
-    .service-detail-card.reverse { direction: rtl; }
-    .service-detail-card.reverse > * { direction: ltr; }
-
-    .service-detail-img {
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      object-fit: cover;
-    }
-
-    .service-detail-body {
-      padding: 48px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .service-bullets {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .service-bullet {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 0.9rem;
-      color: var(--dark-gray);
-    }
-
-    .service-bullet i {
-      color: var(--accent);
-      font-size: 0.85rem;
-      margin-top: 3px;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 768px) {
-      .service-detail-card { grid-template-columns: 1fr; }
-      .service-detail-card.reverse { direction: ltr; }
-      .service-detail-img { min-height: 220px; }
-      .service-detail-body { padding: 28px; }
-    }
-  </style>
 </head>
 <body>
 
 <div id="page-loader">
   <div class="loader-content">
-    <div class="loader-logo">LA<span>BC</span></div>
+    <div class="loader-logo"><img src="images/logo.png" alt="rasayanav logo" class="loader-logo-img" /></div>
     <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
   </div>
 </div>
 
+<!-- NAVBAR -->
 <nav id="navbar">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <div class="logo-mark">LA</div>
-        <span class="logo-text">LA<span>BC</span></span>
+        <img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" />
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="clients.html">Clients</a></li>
+        <li><a href="services.html" class="active">Products</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-cta"><a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a></div>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -103,209 +54,288 @@
 
 <div class="mobile-menu">
   <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
-  <a href="portfolio.html">Portfolio</a><a href="gallery.html">Gallery</a><a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Products</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-accent"></div>
+<section class="page-hero-new">
   <div class="container">
-    <div class="page-hero-content">
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">/</span>
-        <span>Services</span>
-      </nav>
-      <h1>Our Services</h1>
-      <p>Integrated engineering and consultancy services designed to handle projects of any scale and complexity.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES OVERVIEW CARDS -->
-<section class="services-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">What We Offer</span>
-      <h2 class="display-lg" data-aos="fade-up">Full-Spectrum Engineering Services</h2>
-      <p data-aos="fade-up" data-delay="100">Our multidisciplinary capabilities allow us to serve as a single-source partner for your most complex engineering challenges.</p>
-    </div>
-
-    <div class="grid-3">
-      <div class="service-card" data-aos="fade-up" data-delay="100">
-        <div class="service-icon teal"><i class="fas fa-building"></i></div>
-        <h3>Civil & Structural Engineering</h3>
-        <p>Comprehensive civil and structural design services for industrial plants, commercial buildings, infrastructure, and special structures. Our team uses advanced analysis tools to deliver optimized, code-compliant designs.</p>
-        <a href="#civil" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200">
-        <div class="service-icon blue"><i class="fas fa-bolt"></i></div>
-        <h3>Electrical & Instrumentation</h3>
-        <p>Complete E&I engineering from power distribution and control systems to SCADA, DCS, and safety instrumented systems. We handle design, procurement, installation, and commissioning.</p>
-        <a href="#electrical" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="300">
-        <div class="service-icon gold"><i class="fas fa-gears"></i></div>
-        <h3>Mechanical Engineering</h3>
-        <p>Static and rotating equipment design, piping systems, HVAC, plumbing, and process equipment selection. We leverage cutting-edge simulation tools for optimal performance and reliability.</p>
-        <a href="#mechanical" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="100">
-        <div class="service-icon purple"><i class="fas fa-clipboard-list"></i></div>
-        <h3>Project Management</h3>
-        <p>End-to-end project management using PMI best practices. We manage scope, schedule, cost, quality, and risk to ensure project success from concept through commissioning and handover.</p>
-        <a href="#pmc" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200">
-        <div class="service-icon red"><i class="fas fa-fire"></i></div>
-        <h3>Fire Protection & Safety</h3>
-        <p>Integrated fire detection, suppression, and life safety system design. We comply with NFPA, FM Global, and local civil defense requirements to protect personnel and assets.</p>
-        <a href="#fire" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="300">
-        <div class="service-icon green"><i class="fas fa-leaf"></i></div>
-        <h3>Environmental & Sustainability</h3>
-        <p>Environmental impact assessments, LEED certification support, carbon footprint analysis, and sustainability strategy. We help clients meet regulatory requirements and ESG goals.</p>
-        <a href="#env" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="100">
-        <div class="service-icon teal"><i class="fas fa-droplet"></i></div>
-        <h3>Water & Wastewater</h3>
-        <p>Water treatment plant design, distribution network engineering, desalination systems, and wastewater management solutions for industrial and municipal clients.</p>
-        <a href="#water" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200">
-        <div class="service-icon blue"><i class="fas fa-road"></i></div>
-        <h3>Infrastructure & Transportation</h3>
-        <p>Highway design, bridge engineering, airport infrastructure, utilities, and public works. We deliver robust infrastructure that serves communities for generations.</p>
-        <a href="#infra" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="300">
-        <div class="service-icon gold"><i class="fas fa-magnifying-glass"></i></div>
-        <h3>Inspection & Quality Assurance</h3>
-        <p>Third-party inspection, non-destructive testing, quality auditing, and vendor surveillance services ensuring compliance with international standards and client specifications.</p>
-        <a href="#qa" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE DETAILS -->
-<section id="civil" style="background:var(--off-white);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Service Detail</span>
-      <h2 class="display-md" data-aos="fade-up">In-Depth Service Capabilities</h2>
-    </div>
-
-    <!-- Civil -->
-    <div class="service-detail-card" data-aos="fade-up">
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Civil Engineering" class="service-detail-img" />
-      <div class="service-detail-body">
-        <div class="service-icon teal" style="margin-bottom:16px;"><i class="fas fa-building"></i></div>
-        <h3 style="font-size:1.4rem; margin-bottom:12px;">Civil & Structural Engineering</h3>
-        <p style="color:var(--dark-gray); font-size:0.92rem; line-height:1.75;">From foundations to rooftops, our civil and structural team provides complete design and supervision services. We specialize in industrial facilities, commercial buildings, and large-scale infrastructure.</p>
-        <div class="service-bullets">
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Structural analysis using STAAD.Pro, ETABS, SAP2000</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Foundation engineering and geotechnical assessment</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Steel, concrete, and composite structure design</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Site development, drainage, and earthworks</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Construction supervision and quality control</div>
+    <div class="hero-layout-grid">
+      <!-- Left: Product Images -->
+      <div class="hero-images" data-aos="fade-right">
+        <div class="hero-image-showcase">
+          <img src="./images/filter.webp" alt="Water Filtration Systems" class="showcase-img">
         </div>
+        <div class="hero-image-accent"></div>
       </div>
-    </div>
 
-    <!-- Electrical -->
-    <div id="electrical" class="service-detail-card reverse" data-aos="fade-up">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Electrical Engineering" class="service-detail-img" />
-      <div class="service-detail-body">
-        <div class="service-icon blue" style="margin-bottom:16px;"><i class="fas fa-bolt"></i></div>
-        <h3 style="font-size:1.4rem; margin-bottom:12px;">Electrical & Instrumentation</h3>
-        <p style="color:var(--dark-gray); font-size:0.92rem; line-height:1.75;">Comprehensive E&I engineering solutions from MV/LV power distribution systems to complex automation and control architectures for industrial facilities.</p>
-        <div class="service-bullets">
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Power system design, load flow & short circuit analysis</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> DCS, PLC, SCADA, and ESD system design</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Instrumentation specification and datasheets</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Hazardous area classification and Ex equipment</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Commissioning and loop checking</div>
+      <!-- Right: Content -->
+      <div class="hero-content-new" data-aos="fade-left">
+        <h1>Our Water Filtration Products</h1>
+        <p>Rasayanav offers a comprehensive range of <strong>advanced water filtration products</strong> designed to meet the specific needs of homes, offices, and industrial applications. From <strong>whole-house systems</strong> to <strong>portable filters</strong>, our products combine cutting-edge technology with reliability to ensure the purest, cleanest water for your needs.</p>
+        
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Advanced Multi-Stage Filtration Technology</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Premium Quality & Long-Lasting Performance</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Easy Installation & Maintenance</span>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Project Management -->
-    <div id="pmc" class="service-detail-card" data-aos="fade-up">
-      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Project Management" class="service-detail-img" />
-      <div class="service-detail-body">
-        <div class="service-icon purple" style="margin-bottom:16px;"><i class="fas fa-clipboard-list"></i></div>
-        <h3 style="font-size:1.4rem; margin-bottom:12px;">Project Management Consultancy</h3>
-        <p style="color:var(--dark-gray); font-size:0.92rem; line-height:1.75;">Our PMC team acts as the owner's representative — protecting your interests from feasibility through commissioning, ensuring quality, schedule, and cost objectives are met.</p>
-        <div class="service-bullets">
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Project planning, scheduling (Primavera P6)</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Cost estimating, budgeting, and forecasting</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Procurement management and vendor qualification</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Risk identification, analysis, and mitigation</div>
-          <div class="service-bullet"><i class="fas fa-check-circle"></i> Contract administration and claims management</div>
-        </div>
+        <a href="#products" class="btn btn-primary" style="margin-top:28px;">
+          Explore Products <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTORS WE SERVE -->
-<section>
+<!-- PRODUCTS INTRO -->
+<section id="products" class="products-intro-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Industries</span>
-      <h2 class="display-lg" data-aos="fade-up">Sectors We Serve</h2>
+    <div class="section-header" data-aos="fade-up">
+      <h2>Aquafilter Europe Products – Innovative Filtration Solutions for Every Need</h2>
+      <p>From <strong>whole-house filtration systems</strong> to <strong>compact, portable filters</strong>, Rasayanav offers a wide range of products designed to meet the specific needs of homes, offices, and businesses. Discover our complete product portfolio:</p>
     </div>
-    <div class="grid-4">
-      <div class="service-card" data-aos="fade-up" data-delay="100" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon teal" style="margin:0 auto 16px;"><i class="fas fa-industry"></i></div>
-        <h3 style="font-size:1rem;">Oil & Gas</h3>
+  </div>
+</section>
+
+<!-- PRODUCT 1: REVERSE OSMOSIS -->
+<section class="product-detail-section">
+  <div class="container">
+    <div class="product-detail-grid">
+      <!-- Left: Content -->
+      <div class="product-content" data-aos="fade-right">
+        <h2>Reverse Osmosis Water Filters</h2>
+        <p>Our <strong>Reverse Osmosis (RO) filtration systems</strong> provide the purest water by removing a wide range of contaminants. Using advanced membrane technology, these systems eliminate dissolved solids, chemicals, bacteria, and other impurities, ensuring water of the highest quality for drinking and cooking.</p>
+        
+        <div class="product-features">
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Removes 99% of contaminants</strong> including salt, fluoride, and bacteria</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Multi-stage filtration</strong> for comprehensive water purification</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Ideal for homes and offices</strong> requiring premium water quality</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Energy-efficient design</strong> with low water wastage</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" style="margin-top:24px;">
+          Learn More <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
-      <div class="service-card" data-aos="fade-up" data-delay="150" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon blue" style="margin:0 auto 16px;"><i class="fas fa-flask"></i></div>
-        <h3 style="font-size:1rem;">Petrochemical</h3>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon gold" style="margin:0 auto 16px;"><i class="fas fa-plug"></i></div>
-        <h3 style="font-size:1rem;">Power & Energy</h3>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="250" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon green" style="margin:0 auto 16px;"><i class="fas fa-droplet"></i></div>
-        <h3 style="font-size:1rem;">Water & Utilities</h3>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="100" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon purple" style="margin:0 auto 16px;"><i class="fas fa-road"></i></div>
-        <h3 style="font-size:1rem;">Infrastructure</h3>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="150" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon red" style="margin:0 auto 16px;"><i class="fas fa-building"></i></div>
-        <h3 style="font-size:1rem;">Commercial Real Estate</h3>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon teal" style="margin:0 auto 16px;"><i class="fas fa-hospital"></i></div>
-        <h3 style="font-size:1rem;">Healthcare</h3>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="250" style="text-align:center; padding:32px 24px;">
-        <div class="service-icon blue" style="margin:0 auto 16px;"><i class="fas fa-graduation-cap"></i></div>
-        <h3 style="font-size:1rem;">Education</h3>
+
+      <!-- Right: Image -->
+      <div class="product-image" data-aos="fade-left">
+        <img src="./images/purifier.webp" alt="Reverse Osmosis Water Filters" class="product-img">
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- PRODUCT 2: ACTIVATED CARBON FILTERS -->
+<section class="product-detail-section" style="background:var(--secondary-bg);">
+  <div class="container">
+    <div class="product-detail-grid reverse">
+      <!-- Left: Image -->
+      <div class="product-image" data-aos="fade-right">
+        <img src="./images/filter.webp" alt="Activated Carbon Filters" class="product-img">
+      </div>
+
+      <!-- Right: Content -->
+      <div class="product-content" data-aos="fade-left">
+        <h2>Activated Carbon Filters</h2>
+        <p><strong>Activated Carbon Filters</strong> efficiently eliminate odors, chlorine, and organic contaminants, significantly improving the taste and smell of water. These filters are highly effective for everyday drinking water filtration and can be used as pre-filters or standalone systems.</p>
+        
+        <div class="product-features">
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Removes chlorine and odors</strong> for better-tasting water</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Effective against organic contaminants</strong> and volatile compounds</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Cost-effective solution</strong> with long filter lifespan</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Compatible with various systems</strong> for flexible integration</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" style="margin-top:24px;">
+          Learn More <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 3: UV WATER PURIFIERS -->
+<section class="product-detail-section">
+  <div class="container">
+    <div class="product-detail-grid">
+      <!-- Left: Content -->
+      <div class="product-content" data-aos="fade-right">
+        <h2>UV Water Purifiers</h2>
+        <p>Our <strong>UV Water Purifiers</strong> safely eliminate harmful microorganisms without the use of chemicals. Using ultraviolet light technology, these systems effectively kill bacteria, viruses, and other pathogens, ensuring microbiologically safe water for your family or business.</p>
+        
+        <div class="product-features">
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Chemical-free purification</strong> without adding residuals to water</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Highly effective against bacteria and viruses</strong> up to 99.99% reduction</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Instant purification</strong> with no contact time required</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Energy-efficient operation</strong> with low maintenance costs</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" style="margin-top:24px;">
+          Learn More <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="product-image" data-aos="fade-left">
+        <img src="./images/meterpuri.webp" alt="UV Water Purifiers" class="product-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT 4: REPLACEMENT CARTRIDGES -->
+<section class="product-detail-section" style="background:var(--secondary-bg);">
+  <div class="container">
+    <div class="product-detail-grid reverse">
+      <!-- Left: Image -->
+      <div class="product-image" data-aos="fade-right">
+        <img src="./images/glowne.webp" alt="Replacement Cartridges" class="product-img">
+      </div>
+
+      <!-- Right: Content -->
+      <div class="product-content" data-aos="fade-left">
+        <h2>Replacement Cartridges & Accessories</h2>
+        <p><strong>High-quality replacement cartridges</strong> ensure your filtration system works at peak performance for longer. We offer a complete range of compatible cartridges for all filter types, making maintenance simple and cost-effective.</p>
+        
+        <div class="product-features">
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Compatible with all major filter systems</strong> for universal use</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Extended filter lifespan</strong> with premium replacement cartridges</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Easy replacement process</strong> requiring minimal effort</span>
+          </div>
+          <div class="feature-point">
+            <i class="fas fa-check-circle"></i>
+            <span><strong>Affordable maintenance costs</strong> to keep systems running optimally</span>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" style="margin-top:24px;">
+          Learn More <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE RASAYANAV PRODUCTS -->
+<section class="why-choose-products-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Why Choose Rasayanav Products?</h2>
+      <p>When it comes to water filtration solutions, Rasayanav delivers excellence at every level.</p>
+    </div>
+
+    <div class="why-choose-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="why-card">
+        <div class="why-icon">
+          <i class="fas fa-crown"></i>
+        </div>
+        <h3>Premium Quality</h3>
+        <p>All our products are manufactured with top-grade materials using cutting-edge technology to ensure reliability and long-lasting performance.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <i class="fas fa-layer-group"></i>
+        </div>
+        <h3>Advanced Filtration</h3>
+        <p>Multi-stage filtration systems featuring the latest technologies including reverse osmosis, activated carbon, and UV purification.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h3>Eco-Friendly</h3>
+        <p>Our sustainable solutions reduce plastic waste and promote responsible water use for a healthier environment.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>Global Trusted</h3>
+        <p>Millions of satisfied customers worldwide rely on Rasayanav for clean, safe, and healthy water every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
 <section class="cta-section">
   <div class="container">
     <div class="cta-inner">
-      <div>
-        <h2>Need a Custom Solution?</h2>
-        <p>Tell us about your project and we'll propose a tailored service package that fits your needs and budget.</p>
+      <div class="cta-content" data-aos="fade-right">
+        <h2>Ready to Improve Your Water Quality?</h2>
+        <p>Invest in your health and comfort with Rasayanav's advanced water filtration systems. Contact our team to learn more or find the perfect filter for your needs.</p>
       </div>
-      <a href="contact.html" class="btn btn-dark">Request a Proposal <i class="fas fa-arrow-right"></i></a>
+      <div class="cta-buttons" data-aos="fade-left">
+        <a href="contact.html" class="btn btn-primary">
+          Get in Touch
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="tel:+919384379613" class="btn btn-outline-light">
+          <i class="fas fa-phone"></i>
+          Call Us Now
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -315,8 +345,10 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-logo" style="margin-bottom:0;"><div class="logo-mark">LA</div><span class="logo-text">LA<span>BC</span></span></div>
-        <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
+        <div class="nav-logo" style="margin-bottom:0;">
+          <img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" />
+        </div>
+        <p>Advanced water filtration solutions delivering world-class products and services for clean, safe, and healthy water.</p>
         <div class="footer-social">
           <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
           <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
@@ -324,15 +356,44 @@
           <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Civil Engineering</a></li><li><a href="services.html">Electrical & Instrumentation</a></li><li><a href="services.html">Mechanical Engineering</a></li><li><a href="services.html">Project Management</a></li><li><a href="services.html">Fire Protection</a></li></ul></div>
-      <div class="footer-col"><h5>Contact Us</h5>
-        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>King Fahd Road, Al Olaya, Riyadh 11553, Saudi Arabia</span></div>
-        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+966 11 XXX XXXX</span></div>
-        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@labc.com.sa</span></div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="services.html">Reverse Osmosis Filters</a></li>
+          <li><a href="services.html">Activated Carbon Filters</a></li>
+          <li><a href="services.html">UV Water Purifiers</a></li>
+          <li><a href="services.html">Replacement Cartridges</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item">
+          <i class="fas fa-location-dot"></i>
+          <span>6/585, Pasumalaithangal, Perungapur (PO), Gingee (Tk), Villupuram - 604151</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 93843 79613</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@rasayanav.com</span>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2024 LABC. All rights reserved.</span><span>Built with precision &amp; passion</span></div>
+    <div class="footer-bottom">
+      <span>© 2024 Rasayanav. All rights reserved.</span>
+      <span>Advanced Water Filtration Solutions</span>
+    </div>
   </div>
 </footer>
 
@@ -340,3 +401,5 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
+

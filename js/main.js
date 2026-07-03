@@ -511,11 +511,11 @@ function initScrollReveal() {
 ───────────────────────────────────────────────────────────── */
 window.LABC = window.LABC || {};
 window.LABC.toast = function(msg, type = 'success', duration = 5000) {
-  const existing = document.getElementById('labc-toast');
+  const existing = document.getElementById('rasayanav-toast');
   existing?.remove();
 
   const t = document.createElement('div');
-  t.id = 'labc-toast';
+  t.id = 'rasayanav-toast';
   t.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i><span>${msg}</span>`;
   Object.assign(t.style, {
     position: 'fixed', bottom: '32px', left: '50%',

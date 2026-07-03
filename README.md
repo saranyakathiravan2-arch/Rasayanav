@@ -1,4 +1,4 @@
-# LABC — Premium Business Website
+# rasayanav — Premium Business Website
 **Production-ready multi-page website | HTML5 + CSS3 + Vanilla JS**
 
 ---
@@ -90,11 +90,11 @@ The contact form is wired for **EmailJS** (free, no backend needed).
 7. Save, refresh — done! Test by submitting the form.
 
 > **Alternative: FormSubmit (zero-code)**  
-> Change the `<form>` action in `contact.html` to:
-> ```html
-> <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-> ```
-> Add `<input type="hidden" name="_subject" value="New LABC Enquiry">` inside the form.  
+-> Change the `<form>` action in `contact.html` to:
+-> ```html
+-> <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+-> ```
+-> Add `<input type="hidden" name="_subject" value="New rasayanav Enquiry">` inside the form.  
 > No JS changes needed — but you lose the custom success message.
 
 ---
@@ -235,4 +235,4 @@ Open `css/style.css` and edit the `:root` block at the very top:
 
 ---
 
-*Built with precision & passion — LABC Website 2024*
+*Built with precision & passion — rasayanav Website 2024*

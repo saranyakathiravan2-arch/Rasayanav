@@ -1,5 +1,5 @@
 /* ============================================================
-   LABC — Contact Form Handler (contact.js)
+  rasayanav — Contact Form Handler (contact.js)
    Full EmailJS Integration + Advanced Validation
    ============================================================
 
@@ -9,7 +9,7 @@
    2. Click "Email Services" → "Add New Service" → choose Gmail / Outlook
    3. Click "Email Templates" → "Create New Template"
       Use these template variables:
-        Subject:  New Enquiry from {{from_name}} — LABC Website
+        Subject:  New Enquiry from {{from_name}} — rasayanav Website
         Body:
           Name:     {{from_name}}
           Company:  {{company}}

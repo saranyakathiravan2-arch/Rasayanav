@@ -3,11 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – LABC</title>
-  <meta name="description" content="Learn about LABC's history, mission, and the expert team behind our world-class engineering and consultancy services." />
+  <title>About Us | Rasayanav</title>
+  <meta name="description" content="Discover rasayanav's mission, expertise, and the team behind our engineering, consultancy, and laboratory solutions." />
+  <meta name="keywords" content="rasayanav, engineering solutions, lab consultancy, industrial engineering, water treatment, project management" />
+  <meta property="og:title" content="About Us | Rasayanav" />
+  <meta property="og:description" content="Discover rasayanav's mission, expertise, and the team behind our engineering, consultancy, and laboratory solutions." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -15,32 +26,39 @@
 
 <div id="page-loader">
   <div class="loader-content">
-    <div class="loader-logo">LA<span>BC</span></div>
+  <div class="loader-logo"><img src="images/logo.png" alt="rasayanav logo" class="loader-logo-img" /></div>
     <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
   </div>
 </div>
 
-<!-- NAVBAR -->
+<!-- ============ NAVBAR ============ -->
 <nav id="navbar">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <div class="logo-mark">LA</div>
-        <span class="logo-text">LA<span>BC</span></span>
+        <img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" />
       </a>
+
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" >Home</a></li>
         <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="clients.html">Clients</a></li>
+        <li><a href="services.html">Products</a></li>
+        <!-- <li><a href="gallery.html">Gallery</a></li> -->
+        <!-- <li><a href="clients.html">Clients</a></li> -->
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="nav-cta">
+
+      <div class="nav-cta" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <a href="tel:+919384379613" style="font-weight:700;color:var(--text-dark);display:inline-flex;align-items:center;gap:8px;">
+          <i class="fas fa-phone"></i>
+          +91 93843 79613
+        </a>
         <a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a>
       </div>
-      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
@@ -50,192 +68,200 @@
   <a href="index.html">Home</a>
   <a href="about.html">About Us</a>
   <a href="services.html">Services</a>
-  <a href="portfolio.html">Portfolio</a>
   <a href="gallery.html">Gallery</a>
   <a href="clients.html">Clients</a>
   <a href="contact.html">Contact</a>
 </div>
 
 <!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-accent"></div>
+<section class="page-hero-new">
   <div class="container">
-    <div class="page-hero-content">
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">/</span>
-        <span>About Us</span>
-      </nav>
-      <h1>About LABC</h1>
-      <p>Two decades of engineering excellence, built on trust, innovation, and a relentless commitment to quality.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT INTRO -->
-<section>
-  <div class="container">
-    <div class="about-intro">
-      <!-- Image Stack -->
-      <div class="about-img-stack" data-aos="fade-right">
-        <img
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80"
-          alt="LABC Office"
-          class="about-img-main"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80"
-          alt="Team Meeting"
-          class="about-img-secondary"
-        />
-        <div class="about-exp-badge">
-          <div class="exp-num">20+</div>
-          <div class="exp-text">Years of Excellence</div>
+    <div class="hero-layout-grid">
+      <!-- Left: Product Images -->
+      <div class="hero-images" data-aos="fade-right">
+        <div class="hero-image-showcase">
+          <img src="./images/aboutone.webp" alt="Water Purification Systems" class="showcase-img">
         </div>
+        <div class="hero-image-accent"></div>
       </div>
 
-      <!-- Text -->
-      <div class="about-text" data-aos="fade-left">
-        <span class="section-label">Who We Are</span>
-        <h2 class="display-lg" style="margin-bottom:1.5rem;">
-          A Legacy of<br><span class="text-accent">Engineering Excellence</span>
-        </h2>
-        <p style="color:var(--dark-gray); line-height:1.8; font-size:0.95rem; margin-bottom:1rem;">
-          Founded in 2003, LABC has grown from a regional consultancy into a recognized leader in multi-disciplinary engineering and project management services across Saudi Arabia and the broader GCC region.
-        </p>
-        <p style="color:var(--dark-gray); line-height:1.8; font-size:0.95rem;">
-          We serve clients across oil & gas, petrochemical, power, water, infrastructure, and commercial sectors — delivering complex projects with precision, on time, and within budget.
-        </p>
-
-        <div class="value-list">
-          <div class="value-item"><i class="fas fa-check"></i> ISO 9001:2015 Certified Quality Management System</div>
-          <div class="value-item"><i class="fas fa-check"></i> OHSAS 18001 Occupational Health & Safety</div>
-          <div class="value-item"><i class="fas fa-check"></i> ISO 14001 Environmental Management</div>
-          <div class="value-item"><i class="fas fa-check"></i> Saudi Aramco Approved Vendor</div>
-          <div class="value-item"><i class="fas fa-check"></i> SEC & SWCC Registered Contractor</div>
-        </div>
-
-        <a href="contact.html" class="btn btn-primary" style="margin-top:32px;">
-          Work With Us <i class="fas fa-arrow-right"></i>
-        </a>
+      <!-- Right: Content -->
+      <div class="hero-content-new" data-aos="fade-left">
+        <h1>About Rasayanav</h1>
+        <p>Rasayanav is a <strong>leading manufacturer</strong> of innovative <strong>water filtration systems</strong>, providing high-quality solutions to ensure purity, safety, and health in every drop of water. With over two decades of expertise, our company has established itself as a <strong>global leader</strong> in producing <strong>water filters</strong> and <strong>cartridges</strong> designed to meet the growing needs of both residential and industrial customers.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MISSION & VISION -->
-<section style="background:var(--off-white);">
+<!-- EXPERTISE SECTION -->
+<section class="expertise-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Our Foundation</span>
-      <h2 class="display-lg" data-aos="fade-up">Mission, Vision & Values</h2>
-    </div>
+    <div class="expertise-grid">
+      
+      <!-- Left: Content -->
+      <div class="expertise-content" data-aos="fade-right">
+        <h2>Years of Expertise in Water Filtration</h2>
+        <p>With over <strong>7 years of experience</strong> in the <strong>water filtration industry</strong>, <strong>Rasayanav</strong> combines advanced technology with reliable and precise manufacturing. Our <strong>water filtration products</strong> are used worldwide, meeting the highest quality standards and safety regulations. From <strong>reverse osmosis filters</strong> to <strong>carbon filters</strong>, we provide solutions for homes, offices, and industrial applications.</p>
+      </div>
 
-    <div class="grid-3">
-      <div class="service-card" data-aos="fade-up" data-delay="100" style="text-align:center;">
-        <div class="service-icon teal" style="margin:0 auto 24px;"><i class="fas fa-bullseye"></i></div>
-        <h3>Our Mission</h3>
-        <p>To deliver innovative, reliable, and sustainable engineering solutions that drive progress — empowering our clients to achieve their most ambitious goals.</p>
+      <!-- Right: Images -->
+      <div class="expertise-images" data-aos="fade-left">
+        <div class="expertise-showcase">
+          <img src="./images/abouttwo.webp" alt="Water Filtration Products" class="showcase-main">
+        </div>
       </div>
-      <div class="service-card" data-aos="fade-up" data-delay="200" style="text-align:center;">
-        <div class="service-icon blue" style="margin:0 auto 24px;"><i class="fas fa-eye"></i></div>
-        <h3>Our Vision</h3>
-        <p>To be the most trusted engineering and consultancy partner in the MENA region, recognized for technical excellence, integrity, and transformative impact.</p>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-delay="300" style="text-align:center;">
-        <div class="service-icon gold" style="margin:0 auto 24px;"><i class="fas fa-gem"></i></div>
-        <h3>Our Values</h3>
-        <p>Integrity, Innovation, Excellence, Safety, and Collaboration — these principles guide every decision and interaction across our organization.</p>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
-<section>
+<!-- CORE VALUES & WHY CHOOSE SECTION -->
+<section class="values-highlight-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Our People</span>
-      <h2 class="display-lg" data-aos="fade-up">Leadership Team</h2>
-      <p data-aos="fade-up" data-delay="100">Meet the experienced professionals who guide our strategy and operations.</p>
+    
+    <!-- Core Values -->
+    <div class="values-content" data-aos="fade-up">
+      <h2>Our Core Values</h2>
+      <p class="section-intro">At Rasayanav, our commitment to quality, sustainability, and innovation drives everything we do.</p>
+      
+      <div class="values-list">
+        <div class="value-point">
+          <h3>Premium Quality & Advanced Technology:</h3>
+          <p>Every product we offer is the result of <strong>cutting-edge technology</strong> and meticulous engineering. Our <strong>water purification filters</strong> stand as the best advancements in water treatment, including <strong>activated carbon</strong> filtration, <strong>UV purification</strong>, and <strong>reverse osmosis systems</strong> to ensure the highest level of <strong>water quality</strong> for our customers.</p>
+        </div>
+        
+        <div class="value-point">
+          <h3>Trust, Reliability, and Sustainability:</h3>
+          <p>We believe in responsible business practices. Our solutions help reduce plastic waste and promote sustainable water use, providing a <strong>greener future</strong> for generations to come. With millions of satisfied customers around the globe, <strong>Rasayanav</strong> has earned a reputation for trust, quality, and reliability.</p>
+        </div>
+        
+        <div class="value-point">
+          <h3>Global Reach, Local Solutions:</h3>
+          <p>As a leader in the water filtration market, we cater to <strong>diverse water purification needs</strong> across different regions. Whether you're looking for a <strong>home water filter</strong> or an <strong>industrial-scale filtration system</strong>, we offer scalable and flexible solutions designed to meet local water conditions and quality requirements.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="grid-4">
-      <div class="team-card" data-aos="fade-up" data-delay="100">
-        <div class="team-img" style="background:linear-gradient(135deg,#0A2540,#0D3060); min-height:220px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:4rem;">
-          <i class="fas fa-user"></i>
+    <!-- Why Choose Rasayanav -->
+    <div class="why-choose-highlight" data-aos="fade-up">
+      <h2>Why Choose Rasayanav?</h2>
+      <p class="section-intro">When it comes to <strong>water filtration systems</strong>, <strong>Rasayanav</strong> is the trusted choice. Here's why we stand out from the competition:</p>
+      
+      <div class="why-choose-list">
+        <div class="why-point">
+          <h3>Industry Leader in Water Filtration:</h3>
+          <p>With more than 20 years in the industry, <strong>Rasayanav</strong> is recognized as a pioneer in <strong>water filtration technologies</strong>. Our products are setting new standards for effectiveness, reliability, and ease of use.</p>
         </div>
-        <div class="team-info">
-          <div class="team-name">Eng. Khalid Al-Saud</div>
-          <div class="team-role">CEO & Founder</div>
-          <p class="team-bio">25+ years in engineering leadership across GCC mega-projects.</p>
+        
+        <div class="why-point">
+          <h3>Innovative Filtration Technologies:</h3>
+          <p>Our <strong>advanced filtration systems</strong> feature the latest technologies, such as <strong>reverse osmosis</strong>, <strong>carbon block filters</strong>, and <strong>UV filtration</strong>, providing highly effective solutions for eliminating impurities from water.</p>
         </div>
+        
+        <div class="why-point">
+          <h3>Scalable & Flexible Solutions:</h3>
+          <p>We offer customized filtration solutions for both residential and industrial needs. Whether you need a <strong>whole-house filtration system</strong> or a <strong>point-of-use filter</strong>, we can tailor a solution to your exact requirements.</p>
+        </div>
+        
+        <div class="why-point">
+          <h3>Proven Reliability & Satisfaction:</h3>
+          <p>Millions of customers worldwide trust <strong>Rasayanav</strong> to provide clean, safe water every day. Our products are known for their <strong>durability</strong>, efficiency, and ease of installation.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEST CHOICE SECTION -->
+<section class="best-choice-section">
+  <div class="container">
+    <div class="choice-grid">
+      
+      <!-- Left: Content -->
+      <div class="choice-content" data-aos="fade-right">
+        <h2>Why Rasayanav is Your Best Choice</h2>
+        <p>If you're looking for <strong>top-quality water filtration systems</strong>, look no further than <strong>Rasayanav</strong>. With decades of expertise, innovative technologies, and a commitment to customer satisfaction, we are your trusted partner for clean, safe water.</p>
       </div>
 
-      <div class="team-card" data-aos="fade-up" data-delay="200">
-        <div class="team-img" style="background:linear-gradient(135deg,#0A2540,#1a4a6e); min-height:220px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:4rem;">
-          <i class="fas fa-user"></i>
+      <!-- Right: Images -->
+      <div class="choice-images" data-aos="fade-left">
+        <div class="choice-showcase">
+          <img src="./images/aboutthree.webp" alt="Premium Water Filtration" class="showcase-product">
         </div>
-        <div class="team-info">
-          <div class="team-name">Dr. Fatima Al-Rashid</div>
-          <div class="team-role">Chief Technical Officer</div>
-          <p class="team-bio">PhD in Structural Engineering, 20 years in complex infrastructure projects.</p>
-        </div>
+        <div class="choice-accent"></div>
       </div>
 
-      <div class="team-card" data-aos="fade-up" data-delay="300">
-        <div class="team-img" style="background:linear-gradient(135deg,#0A2540,#003d32); min-height:220px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:4rem;">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="team-info">
-          <div class="team-name">Eng. Omar Al-Harbi</div>
-          <div class="team-role">VP Project Management</div>
-          <p class="team-bio">PMP certified with $2B+ in delivered project value across oil & gas.</p>
-        </div>
-      </div>
-
-      <div class="team-card" data-aos="fade-up" data-delay="400">
-        <div class="team-img" style="background:linear-gradient(135deg,#0A2540,#3d2a00); min-height:220px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:4rem;">
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="team-info">
-          <div class="team-name">Eng. Nora Al-Otaibi</div>
-          <div class="team-role">Head of Sustainability</div>
-          <p class="team-bio">LEED AP with expertise in green building and environmental compliance.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section style="background:var(--primary); padding:80px 0;">
+<!-- PRODUCTS SECTION -->
+<section class="products-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label" style="color:rgba(255,255,255,0.5);">Accreditations</span>
-      <h2 class="display-lg text-white" data-aos="fade-up">Certifications & Affiliations</h2>
+    <div class="section-header" data-aos="fade-up">
+      <h2>Our Products: Comprehensive Water Filtration Solutions</h2>
+      <p>From <strong>whole-house filtration systems</strong> to <strong>compact, portable filters</strong>, Rasayanav offers a wide range of products designed to meet the specific needs of homes, offices, and businesses. Our product portfolio includes:</p>
     </div>
-    <div class="clients-logos">
-      <span class="client-logo" style="color:rgba(255,255,255,0.4);">ISO 9001:2015</span>
-      <span class="client-logo" style="color:rgba(255,255,255,0.4);">OHSAS 18001</span>
-      <span class="client-logo" style="color:rgba(255,255,255,0.4);">ISO 14001</span>
-      <span class="client-logo" style="color:rgba(255,255,255,0.4);">PMI Member</span>
-      <span class="client-logo" style="color:rgba(255,255,255,0.4);">ASCE</span>
-      <span class="client-logo" style="color:rgba(255,255,255,0.4);">LEED AP</span>
+
+    <div class="products-grid" data-aos="fade-up" data-aos-delay="100">
+      
+      <div class="product-card">
+        <div class="product-icon">
+          <i class="fas fa-droplet"></i>
+        </div>
+        <h3>Reverse Osmosis Water Filters</h3>
+        <p>Provide the purest water by removing a wide range of contaminants.</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h3>Activated Carbon Filters</h3>
+        <p>Efficiently eliminate odors, chlorine, and impurities for great-tasting water.</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>UV Water Purifiers</h3>
+        <p>Safely kill harmful microorganisms without chemicals.</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Replacement Cartridges</h3>
+        <p>Ensure your filtration system works at peak performance for longer.</p>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <div class="cta-inner">
-      <div>
-        <h2>Ready to Partner with LABC?</h2>
-        <p>Let's build something exceptional together. Contact us today to explore partnership opportunities.</p>
+      <div class="cta-content" data-aos="fade-right">
+        <h2>Ready to Improve Your Water Quality?</h2>
+        <p>Invest in your health and comfort with Rasayanav's advanced water filtration systems. Contact our team to learn more or find the perfect filter for your needs.</p>
       </div>
-      <a href="contact.html" class="btn btn-dark">Start a Conversation <i class="fas fa-arrow-right"></i></a>
+      <div class="cta-buttons" data-aos="fade-left">
+        <a href="contact.html" class="btn btn-primary">
+          Get in Touch
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="tel:+919384379613" class="btn btn-outline-light">
+          <i class="fas fa-phone"></i>
+          Call Us Now
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -246,8 +272,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="nav-logo" style="margin-bottom:0;">
-          <div class="logo-mark">LA</div>
-          <span class="logo-text">LA<span>BC</span></span>
+          <img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" />
         </div>
         <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
         <div class="footer-social">
@@ -263,7 +288,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </div>
@@ -281,7 +305,7 @@
         <h5>Contact Us</h5>
         <div class="footer-contact-item">
           <i class="fas fa-location-dot"></i>
-          <span>King Fahd Road, Al Olaya, Riyadh 11553, Saudi Arabia</span>
+          <span>6/585, Pasumalaithangal, Perungapur (PO), Gingee (Tk), Villupuram - 604151</span>
         </div>
         <div class="footer-contact-item">
           <i class="fas fa-phone"></i>
@@ -294,7 +318,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 LABC. All rights reserved.</span>
+      <span>© 2024 rasayanav. All rights reserved.</span>
       <span>Built with precision &amp; passion</span>
     </div>
   </div>
