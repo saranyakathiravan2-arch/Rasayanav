@@ -81,35 +81,60 @@ const navbar = document.getElementById('navbar');
    4.  MOBILE MENU
 ───────────────────────────────────────────────────────────── */
 (function initMobileMenu() {
-  const hamburger  = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const closeBtn   = document.querySelector('.mobile-menu-close');
+
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  const closeBtn = document.querySelector(".mobile-menu-close");
+
   if (!hamburger || !mobileMenu) return;
 
-  function open() {
-    mobileMenu.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    const spans = hamburger.querySelectorAll('span');
-    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-    spans[1].style.opacity   = '0';
-    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-    hamburger.setAttribute('aria-expanded', 'true');
+  function openMenu() {
+    mobileMenu.classList.add("open");
+    document.body.style.overflow = "hidden";
+
+    const spans = hamburger.querySelectorAll("span");
+
+    spans[0].style.transform = "translateY(7px) rotate(45deg)";
+    spans[1].style.opacity = "0";
+    spans[2].style.transform = "translateY(-7px) rotate(-45deg)";
+
+    hamburger.setAttribute("aria-expanded", "true");
   }
 
-  function close() {
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
-    hamburger.querySelectorAll('span').forEach(s => {
-      s.style.transform = '';
-      s.style.opacity   = '';
-    });
-    hamburger.setAttribute('aria-expanded', 'false');
+  function closeMenu() {
+    mobileMenu.classList.remove("open");
+    document.body.style.overflow = "";
+
+    const spans = hamburger.querySelectorAll("span");
+
+    spans[0].style.transform = "";
+    spans[1].style.opacity = "";
+    spans[2].style.transform = "";
+
+    hamburger.setAttribute("aria-expanded", "false");
   }
 
-  hamburger.addEventListener('click', open);
-  closeBtn?.addEventListener('click', close);
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  hamburger.addEventListener("click", () => {
+
+    if (mobileMenu.classList.contains("open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+
+  });
+
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeMenu();
+    }
+  });
+
 })();
 
 /* ─────────────────────────────────────────────────────────────

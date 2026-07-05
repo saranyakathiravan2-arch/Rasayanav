@@ -10,7 +10,7 @@ labc-website/
 │
 ├── index.html          ← Home page
 ├── about.html          ← About Us
-├── services.html       ← Services
+├── products.html       ← Services
 ├── portfolio.html      ← Portfolio / Projects (with modal)
 ├── gallery.html        ← Gallery (masonry + lightbox)
 ├── clients.html        ← Clients & Testimonials
@@ -175,7 +175,7 @@ CNAME   www     your-site.netlify.app
 | Company name / tagline | All HTML `<title>` tags + hero section in `index.html` |
 | Phone / Email | `index.html` (footer) + `contact.html` (info card) |
 | Address | Footer (all pages) + `contact.html` |
-| Services | `services.html` + `index.html` (services preview section) |
+| Services | `products.html` + `index.html` (services preview section) |
 | Portfolio projects | `portfolio.html` (each `.portfolio-card`) |
 | Team members | `about.html` (`.grid-4` team section) |
 | Testimonials | `index.html` + `clients.html` |
@@ -204,7 +204,7 @@ Open `css/style.css` and edit the `:root` block at the very top:
 |------|------|-------------|
 | Home | `index.html` | Animated hero, services preview, stats counters, portfolio preview, testimonials, CTA |
 | About | `about.html` | Image stack, values, team cards, certifications |
-| Services | `services.html` | 9 service cards, detailed service sections, sectors grid |
+| Services | `products.html` | 9 service cards, detailed service sections, sectors grid |
 | Portfolio | `portfolio.html` | Category filters, project cards, click-to-open modals, stats |
 | Gallery | `gallery.html` | Masonry grid, category filter, lightbox with keyboard nav + counter |
 | Clients | `clients.html` | Client logo grid, featured testimonial, 6 review cards, rating summary |
