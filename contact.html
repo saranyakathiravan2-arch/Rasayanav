@@ -42,153 +42,6 @@
 
   <!-- EmailJS SDK — uncomment when you have credentials -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
-
-  <style>
-    /* MAP EMBED CONTAINER */
-    .map-container {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      height: 340px;
-      background: var(--light-gray);
-      position: relative;
-    }
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-    .map-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #0A2540 0%, #0D3060 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      color: rgba(255,255,255,0.6);
-      text-align: center;
-      padding: 24px;
-    }
-    .map-placeholder i {
-      font-size: 2.5rem;
-      color: var(--accent);
-    }
-    .map-placeholder p { font-size: 0.88rem; line-height: 1.6; }
-
-    /* OFFICE HOURS */
-    .hours-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 20px;
-    }
-    .hours-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-size: 0.86rem;
-    }
-    .hours-day { color: rgba(255,255,255,0.5); }
-    .hours-time { color: var(--white); font-weight: 600; }
-    .hours-closed { color: #EF4444; font-weight: 600; }
-
-    /* SUBMIT BUTTON LOADING STATE */
-    .btn-submit {
-      width: 100%;
-      justify-content: center;
-      padding: 16px 32px;
-      font-size: 0.95rem;
-      position: relative;
-    }
-    .btn-submit:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-      transform: none !important;
-    }
-
-    /* INPUT ICONS */
-    .input-icon-wrap {
-      position: relative;
-    }
-    .input-icon-wrap .field-icon {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--mid-gray);
-      font-size: 0.9rem;
-      pointer-events: none;
-      transition: color 0.3s;
-    }
-    .input-icon-wrap.textarea-icon .field-icon {
-      top: 18px;
-      transform: none;
-    }
-    .input-icon-wrap input,
-    .input-icon-wrap select,
-    .input-icon-wrap textarea {
-      padding-left: 44px !important;
-    }
-    .input-icon-wrap input:focus ~ .field-icon,
-    .input-icon-wrap select:focus ~ .field-icon,
-    .input-icon-wrap textarea:focus ~ .field-icon {
-      color: var(--accent);
-    }
-
-    /* SELECT ARROW */
-    .form-group select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234A5568' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 16px center;
-      cursor: pointer;
-    }
-
-    /* FAQ */
-    .faq-item {
-      background: var(--white);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--light-gray);
-      overflow: hidden;
-      margin-bottom: 12px;
-      transition: box-shadow 0.3s;
-    }
-    .faq-item.open { box-shadow: var(--shadow-sm); }
-    .faq-question {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 24px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      gap: 16px;
-    }
-    .faq-question i {
-      color: var(--accent);
-      transition: transform 0.3s;
-      flex-shrink: 0;
-    }
-    .faq-item.open .faq-question i { transform: rotate(180deg); }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s;
-      font-size: 0.88rem;
-      color: var(--dark-gray);
-      line-height: 1.7;
-    }
-    .faq-answer.open {
-      max-height: 200px;
-      padding: 0 24px 20px;
-    }
-  </style>
 </head>
 <body>
 
@@ -210,15 +63,15 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="clients.html">Clients</a></li>
+        <li><a href="services.html">Products</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-      <div class="nav-cta">
-        <a href="tel:+96611XXXXXXX" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);">
-          <i class="fas fa-phone"></i> Call Now
+      <div class="nav-cta" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <a href="tel:+919384379613" style="font-weight:700;color:var(--text-dark);display:inline-flex;align-items:center;gap:8px;">
+          <i class="fas fa-phone"></i>
+          +91 93843 79613
         </a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote <i class="fas fa-arrow-right"></i></a>
       </div>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -227,27 +80,13 @@
 
 <div class="mobile-menu">
   <button class="mobile-menu-close"><i class="fas fa-times"></i></button>
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="clients.html">Clients</a><a href="contact.html">Contact</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Products</a>
+  <a href="contact.html">Contact</a>
 </div>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-accent"></div>
-  <div class="container">
-    <div class="page-hero-content">
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">/</span>
-        <span>Contact Us</span>
-      </nav>
-      <h1>Get In Touch</h1>
-      <p>Ready to start your next project? Our team is here to help — reach out and we'll respond within 24 hours.</p>
-    </div>
-  </div>
-</section>
+
 
 <!-- CONTACT MAIN -->
 <section>
@@ -257,61 +96,51 @@
       <!-- LEFT — Info Card -->
       <div data-aos="fade-right">
         <div class="contact-info-card">
-          <span class="section-label" style="color:rgba(255,255,255,0.45);">Contact Details</span>
-          <h2 style="font-size:1.6rem; margin-bottom:8px;">We'd Love to Hear From You</h2>
-          <p style="color:rgba(255,255,255,0.5); font-size:0.88rem; line-height:1.7; margin-bottom:8px;">
-            Whether you have a question about our services, want to discuss a project, or are ready to get started — our team is standing by.
-          </p>
-
           <div class="contact-detail">
             <div class="contact-detail-icon"><i class="fas fa-location-dot"></i></div>
             <div class="contact-detail-text">
               <label>Head Office</label>
-              <span>6/585, Pasumalaithangal,<br>Perungapur (PO), Gingee (Tk),<br>Villupuram - 604151</span>
+              <span>Rasayanav Enterprises<br>Door No 111A, Appusamy Layout,Nirmala College For Women, Appusamy Road,<br>Race Course, Coimbatore - 641018,<br>Tamil Nadu</span>
             </div>
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
             <div class="contact-detail-text">
               <label>Phone</label>
-              <span><a href="tel:+96611XXXXXXX" style="color:inherit;">+966 11 XXX XXXX</a></span>
+              <span><a href="tel:+919606161762" style="color:inherit;">09606161762</a></span>
             </div>
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon"><i class="fas fa-mobile-screen"></i></div>
             <div class="contact-detail-text">
-              <label>Mobile / WhatsApp</label>
-              <span><a href="https://wa.me/966XXXXXXX" style="color:inherit;">+966 5X XXX XXXX</a></span>
+              <label>WhatsApp</label>
+              <span><a href="https://wa.me/919606161762" style="color:inherit;">09606161762</a></span>
             </div>
           </div>
           <div class="contact-detail">
             <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
             <div class="contact-detail-text">
               <label>Email</label>
-              <span><a href="mailto:info@labc.com.sa" style="color:inherit;">info@labc.com.sa</a></span>
+              <span><a href="mailto:info@rasayanav.com" style="color:inherit;">info@rasayanav.com</a></span>
             </div>
           </div>
 
           <!-- Office Hours -->
           <div class="hours-list">
-            <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.35); font-weight:700; margin-bottom:4px;">Office Hours</div>
+            <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em;  font-weight:700; margin-bottom:4px;">Office Hours</div>
             <div class="hours-item">
-              <span class="hours-day">Sunday – Thursday</span>
-              <span class="hours-time">8:00 AM – 5:00 PM</span>
-            </div>
-            <div class="hours-item">
-              <span class="hours-day">Friday</span>
-              <span class="hours-closed">Closed</span>
+              <span class="hours-day">Monday – Saturday</span>
+              <span class="hours-time">9:00 AM – 7:00 PM</span>
             </div>
             <div class="hours-item" style="border:none;">
-              <span class="hours-day">Saturday</span>
+              <span class="hours-day">Sunday</span>
               <span class="hours-closed">Closed</span>
             </div>
           </div>
 
           <!-- Social Links -->
           <div style="margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08);">
-            <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:rgba(255,255,255,0.35); font-weight:700; margin-bottom:12px;">Follow Us</div>
+            <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:700; margin-bottom:12px;">Follow Us</div>
             <div class="footer-social">
               <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -320,241 +149,216 @@
             </div>
           </div>
         </div>
-
-        <!-- Map -->
-        <div class="map-container" style="margin-top:24px;">
-          <div class="map-placeholder">
-            <i class="fas fa-map-location-dot"></i>
-            <div>
-              <strong style="color:white; display:block; font-size:1rem; margin-bottom:6px;">rasayanav Head Office</strong>
-              <p>6/585, Pasumalaithangal, Perungapur (PO), Gingee (Tk), Villupuram - 604151</p>
-              <a href="https://maps.google.com/?q=6%2F585%2C+Pasumalaithangal%2C+Perungapur+%28PO%29%2C+Gingee+%28Tk%29%2C+Villupuram+-+604151" target="_blank" rel="noopener"
-                 class="btn btn-primary" style="margin-top:16px; padding:10px 20px; font-size:0.82rem;">
-                <i class="fas fa-directions"></i> Get Directions
-              </a>
-            </div>
-          </div>
-          <!--
-            TO EMBED GOOGLE MAPS:
-            Replace the .map-placeholder div above with:
-            <iframe
-              src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
-              allowfullscreen loading="lazy">
-            </iframe>
-          -->
-        </div>
       </div>
 
       <!-- RIGHT — Contact Form -->
-      <div data-aos="fade-left">
-        <div class="contact-form-wrapper">
-          <span class="section-label">Send a Message</span>
-          <h3>Tell Us About Your Project</h3>
-          <p style="color:var(--dark-gray); font-size:0.88rem; line-height:1.65; margin-bottom:32px; margin-top:-8px;">
-            Fill in the form below and a member of our team will be in touch within one business day.
-          </p>
+<div data-aos="fade-left">
+  <div class="contact-form-wrapper">
+    <form id="contact-form" novalidate>
 
-          <form id="contact-form" novalidate>
-            <!-- Name + Company Row -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Full Name <span style="color:#EF4444;">*</span></label>
-                <div class="input-icon-wrap">
-                  <input
-                    type="text"
-                    id="name"
-                    name="from_name"
-                    placeholder="John Smith"
-                    required
-                    autocomplete="name"
-                  />
-                  <i class="fas fa-user field-icon"></i>
-                </div>
-                <span class="form-error" id="name-error"></span>
-              </div>
-              <div class="form-group">
-                <label for="company">Company Name</label>
-                <div class="input-icon-wrap">
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    placeholder="Your Company"
-                    autocomplete="organization"
-                  />
-                  <i class="fas fa-building field-icon"></i>
-                </div>
-              </div>
-            </div>
+    <h3>Let's Find the Right Water Purifier for You</h3>
 
-            <!-- Email + Phone Row -->
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email Address <span style="color:#EF4444;">*</span></label>
-                <div class="input-icon-wrap">
-                  <input
-                    type="email"
-                    id="email"
-                    name="from_email"
-                    placeholder="john@company.com"
-                    required
-                    autocomplete="email"
-                  />
-                  <i class="fas fa-envelope field-icon"></i>
-                </div>
-                <span class="form-error" id="email-error"></span>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number <span style="color:#EF4444;">*</span></label>
-                <div class="input-icon-wrap">
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="+966 5X XXX XXXX"
-                    required
-                    autocomplete="tel"
-                  />
-                  <i class="fas fa-phone field-icon"></i>
-                </div>
-                <span class="form-error" id="phone-error"></span>
-              </div>
-            </div>
+    <p class="form-description">
+        Have questions about our water purification solutions? Fill out the form below and our team will get back to you as soon as possible.
+    </p>
 
-            <!-- Service Selection -->
-            <div class="form-group">
-              <label for="service">Service of Interest <span style="color:#EF4444;">*</span></label>
-              <div class="input-icon-wrap">
-                <select id="service" name="service" required>
-                  <option value="" disabled selected>Select a service…</option>
-                  <option value="Civil & Structural Engineering">Civil & Structural Engineering</option>
-                  <option value="Electrical & Instrumentation">Electrical & Instrumentation</option>
-                  <option value="Mechanical Engineering">Mechanical Engineering</option>
-                  <option value="Project Management Consultancy">Project Management Consultancy</option>
-                  <option value="Fire Protection & Safety">Fire Protection & Safety</option>
-                  <option value="Water & Wastewater">Water & Wastewater</option>
-                  <option value="Infrastructure & Transportation">Infrastructure & Transportation</option>
-                  <option value="Environmental & Sustainability">Environmental & Sustainability</option>
-                  <option value="Inspection & QA">Inspection & Quality Assurance</option>
-                  <option value="Other">Other / General Inquiry</option>
-                </select>
-                <i class="fas fa-briefcase field-icon"></i>
-              </div>
-              <span class="form-error" id="service-error"></span>
-            </div>
+    <!-- Full Name -->
+    <div class="form-group">
+        <label for="name">
+            Full Name <span class="required">*</span>
+        </label>
 
-            <!-- Message -->
-            <div class="form-group">
-              <label for="message">Project Details <span style="color:#EF4444;">*</span></label>
-              <div class="input-icon-wrap textarea-icon">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Briefly describe your project — scope, location, timeline, and any specific requirements…"
-                  required
-                ></textarea>
-                <i class="fas fa-comment-dots field-icon"></i>
-              </div>
-              <span class="form-error" id="message-error"></span>
-            </div>
-
-            <!-- Budget (Optional) -->
-            <div class="form-group">
-              <label for="budget">Estimated Budget (Optional)</label>
-              <div class="input-icon-wrap">
-                <select id="budget" name="budget">
-                  <option value="" selected>Prefer not to say</option>
-                  <option value="Under SAR 500K">Under SAR 500,000</option>
-                  <option value="SAR 500K – 2M">SAR 500,000 – 2 Million</option>
-                  <option value="SAR 2M – 10M">SAR 2 Million – 10 Million</option>
-                  <option value="SAR 10M – 50M">SAR 10 Million – 50 Million</option>
-                  <option value="Over SAR 50M">Over SAR 50 Million</option>
-                </select>
-                <i class="fas fa-coins field-icon"></i>
-              </div>
-            </div>
-
-            <!-- Privacy Consent -->
-            <div class="form-group" style="margin-bottom:24px;">
-              <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; text-transform:none; letter-spacing:0; font-weight:400; font-size:0.85rem; color:var(--dark-gray);">
-                <input type="checkbox" id="consent" name="consent" required
-                  style="width:18px; height:18px; margin-top:1px; accent-color:var(--accent); flex-shrink:0;" />
-                I agree to rasayanav's Privacy Policy and consent to being contacted regarding my enquiry.
-              </label>
-              <span class="form-error" id="consent-error"></span>
-            </div>
-
-            <!-- Submit -->
-            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-              <span id="btn-text">Send Message</span>
-            </button>
-
-            <!-- Form Message -->
-            <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
-          </form>
+        <div class="input-icon-wrap">
+            <input
+                type="text"
+                id="name"
+                name="from_name"
+                placeholder="Enter your full name"
+                required
+            >
+            <i class="fas fa-user field-icon"></i>
         </div>
-      </div>
+
+        <span class="form-error" id="name-error"></span>
+    </div>
+
+    <!-- Mobile Number -->
+    <div class="form-group">
+        <label for="phone">
+            Mobile Number <span class="required">*</span>
+        </label>
+
+        <div class="input-icon-wrap">
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 98765 43210"
+                required
+            >
+            <i class="fas fa-phone field-icon"></i>
+        </div>
+
+        <span class="form-error" id="phone-error"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">
+            Email Address
+        </label>
+
+        <div class="input-icon-wrap">
+            <input
+                type="email"
+                id="email"
+                name="from_email"
+                placeholder="your@email.com"
+            >
+            <i class="fas fa-envelope field-icon"></i>
+        </div>
+
+        <span class="form-error" id="email-error"></span>
+    </div>
+
+    <!-- Product -->
+    <div class="form-group">
+        <label for="service">
+            Product / Service Required
+            <span class="required">*</span>
+        </label>
+
+        <div class="input-icon-wrap">
+            <select
+                id="service"
+                name="service"
+                required
+            >
+                <option value="">Select a Product</option>
+
+                <option value="RO Water Purifier">
+                    RO Water Purifier
+                </option>
+
+                <option value="UV Water Purifier">
+                    UV Water Purifier
+                </option>
+
+                <option value="UF Water Purifier">
+                    UF Water Purifier
+                </option>
+
+                <option value="Domestic Water Filter">
+                    Domestic Water Filter
+                </option>
+
+                <option value="RO Membrane">
+                    RO Membrane
+                </option>
+
+                <option value="Filter Cartridge">
+                    Filter Cartridge
+                </option>
+
+                <option value="Water Softener">
+                    Water Softener
+                </option>
+
+                <option value="Accessories">
+                    Accessories
+                </option>
+
+                <option value="Installation Service">
+                    Installation Service
+                </option>
+
+                <option value="Maintenance Service">
+                    Maintenance Service
+                </option>
+
+                <option value="Need Consultation">
+                    Need Consultation
+                </option>
+
+            </select>
+
+            <i class="fas fa-filter field-icon"></i>
+        </div>
+
+        <span class="form-error" id="service-error"></span>
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+        <label for="message">
+            Your Requirement
+        </label>
+
+        <div class="input-icon-wrap textarea-icon">
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us about your requirement, preferred product, installation location, or any questions you have..."
+            ></textarea>
+
+            <i class="fas fa-comment-dots field-icon"></i>
+        </div>
+
+        <span class="form-error" id="message-error"></span>
+    </div>
+
+    <!-- Consent -->
+
+    <div class="form-group consent-group">
+
+        <label class="checkbox-label">
+
+            <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required
+            >
+
+            <span>
+                I agree to Rasayanav contacting me regarding my enquiry.
+            </span>
+
+        </label>
+
+        <span class="form-error" id="consent-error"></span>
 
     </div>
+
+    <!-- Submit -->
+
+    <button
+        type="submit"
+        class="btn btn-primary btn-submit"
+        id="submit-btn"
+    >
+
+        <i class="fas fa-paper-plane"></i>
+
+        <span id="btn-text">
+            Get a Free Consultation
+        </span>
+
+    </button>
+
+    <div
+        id="form-message"
+        class="form-message"
+        role="alert"
+        aria-live="polite"
+    ></div>
+
+</form>
+
   </div>
-</section>
+</div>
 
-<!-- FAQ -->
-<section style="background:var(--off-white);">
-  <div class="container" style="max-width:800px;">
-    <div class="section-header">
-      <span class="section-label">FAQs</span>
-      <h2 class="display-lg" data-aos="fade-up">Frequently Asked Questions</h2>
-    </div>
-
-    <div id="faq-list">
-      <div class="faq-item" data-aos="fade-up" data-delay="50">
-        <div class="faq-question">
-          How quickly can rasayanav mobilize a project team?
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          For most projects, rasayanav can mobilize a core team within 2–4 weeks of contract award. For urgent requirements, we maintain a roster of pre-qualified professionals who can be deployed faster. Contact us to discuss your specific timeline needs.
-        </div>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-delay="100">
-        <div class="faq-question">
-          Do you serve projects outside Saudi Arabia?
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          Yes. While our primary focus is Saudi Arabia, rasayanav has delivered projects across the GCC (UAE, Kuwait, Bahrain, Qatar, Oman) and in select international markets. We have experience navigating multi-jurisdictional regulatory requirements.
-        </div>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-delay="150">
-        <div class="faq-question">
-          What does a typical project engagement look like?
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          Every engagement begins with a detailed scope and needs assessment. From there, we propose the most appropriate delivery model — whether that's full EPCM, standalone engineering, PMC, or advisory. We provide a detailed proposal with scope, deliverables, schedule, and fee structure.
-        </div>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-delay="200">
-        <div class="faq-question">
-          Is rasayanav on Saudi Aramco's Approved Vendor List?
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          Yes. rasayanav is a registered and approved engineering consultant in Saudi Aramco's Vendor Master, as well as being registered with SABIC, SWCC, NWC, and numerous other major clients. We can provide registration certificates upon request.
-        </div>
-      </div>
-      <div class="faq-item" data-aos="fade-up" data-delay="250">
-        <div class="faq-question">
-          How is rasayanav's pricing structured?
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-          We offer flexible fee structures depending on the project type: lump-sum fixed fee, time-and-materials, or a hybrid model. For PMC engagements, we typically work on a percentage of project cost or a fixed monthly retainer. We are always transparent about our fee basis.
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -565,7 +369,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="nav-logo" style="margin-bottom:0;"><img src="images/logo.png" alt="rasayanav Logo" class="nav-logo-img" /></div>
-        <p>Leading Authority in Business & Consultancy — delivering world-class engineering and advisory services since 2003.</p>
+        <p>Advanced water purification products delivering clean, safe, and healthy drinking water for every home.</p>
         <div class="footer-social">
           <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
           <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
@@ -573,20 +377,22 @@
           <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
-      <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">Civil Engineering</a></li><li><a href="services.html">Electrical & Instrumentation</a></li><li><a href="services.html">Mechanical Engineering</a></li><li><a href="services.html">Project Management</a></li><li><a href="services.html">Fire Protection</a></li></ul></div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Products</h5><ul><li><a href="services.html">Wall-Mounted & Under-Sink RO</a></li><li><a href="services.html">Activated Carbon Filters</a></li><li><a href="services.html">UV Water Purifiers</a></li><li><a href="services.html">RO Membranes & Cartridges</a></li></ul></div>
       <div class="footer-col"><h5>Contact Us</h5>
-        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>6/585, Pasumalaithangal, Perungapur (PO), Gingee (Tk), Villupuram - 604151</span></div>
-        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>+966 11 XXX XXXX</span></div>
-        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@labc.com.sa</span></div>
+        <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>Rasayanav Enterprises, Door No 111A, Appusamy Layout, Nirmala College For Women, Appusamy Road, Race Course, Coimbatore - 641018, Tamil Nadu</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919606161762" style="color:inherit;">09606161762</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:info@rasayanav.com" style="color:inherit;">info@rasayanav.com</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-location-dot"></i><span><a href="https://jsdl.in/DT-21I6YHXBTIJ" target="_blank" rel="noopener" style="color:inherit;">Get Directions</a></span></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2024 rasayanav. All rights reserved.</span><span>Built with precision &amp; passion</span></div>
+    <div class="footer-bottom"><span>© 2024 Rasayanav. All rights reserved.</span><span>Advanced Water Purification Solutions</span></div>
   </div>
 </footer>
 
 <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
 <script>
